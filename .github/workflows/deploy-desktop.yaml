@@ -142,7 +142,41 @@ jobs:
           echo STRIPE_PUBLISHABLE_KEY=${{ secrets.STRIPE_PUBLISHABLE_KEY }} >> .env
           cat .env
 
+      - name: (Windows) Build App
+        if: matrix.platform == 'windows-latest'
+        run: |
+          pnpm tauri build -c src-tauri/tauri.prod-windows.conf.json
+          # Move artifacts for code sign
+          mkdir "${env:GITHUB_WORKSPACE}\src-tauri\target\release\bundle\to-sign"
+          Move-Item "${env:GITHUB_WORKSPACE}\src-tauri\target\release\bundle\msi\*" "${env:GITHUB_WORKSPACE}\src-tauri\target\release\bundle\to-sign\" -Force
+          Move-Item "${env:GITHUB_WORKSPACE}\src-tauri\target\release\bundle\nsis\*" "${env:GITHUB_WORKSPACE}\src-tauri\target\release\bundle\to-sign\" -Force
+        shell: pwsh
+
+      - name: (Windows) Sign Artifact with CodeSignTool
+        uses: sslcom/esigner-codesign@develop
+        if: matrix.platform == 'windows-latest'
+        with:
+          command: batch_sign
+          username: ${{secrets.ES_USERNAME}}
+          password: ${{secrets.ES_PASSWORD}}
+          credential_id: ${{secrets.ES_CREDENTIAL_ID}}
+          totp_secret: ${{secrets.ES_TOTP_SECRET}}
+          # Path of code object to be signed.
+          dir_path: ${GITHUB_WORKSPACE}\src-tauri\target\release\bundle\to-sign
+          # Scans your file for any possible malware in order to avoid code compromise and prevents signing of code if malware is detected.
+          # On batch_sign command: If you are getting 'Error: hash needs to be scanned first before submitting for signing: <hash_value>', you can set this value to true
+          malware_block: false
+          # Overrides the input file after signing, if this parameter is set and no -output_dir_path parameter
+          override: true
+          # Clean log files after code signing operations
+          clean_logs: true
+          # Maximumx JVM heap size
+          jvm_max_memory: 1024M
+          # Code signing method. Default is v1. Supported values: v1, v2
+          signing_method: v1
+
       - uses: tauri-apps/tauri-action@v0
+        if: matrix.platform != 'windows-latest'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
