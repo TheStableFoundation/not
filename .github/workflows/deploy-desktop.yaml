@@ -164,7 +164,7 @@ jobs:
           totp_secret: ${{secrets.ES_TOTP_SECRET}}
           # Path of code object to be signed.
           dir_path: ${GITHUB_WORKSPACE}\src-tauri\target\release\bundle\to-sign
-          output_dir_path: ${GITHUB_WORKSPACE}\src-tauri\target\release\bundle\signed
+          output_path: ${GITHUB_WORKSPACE}\src-tauri\target\release\bundle\signed
           # Scans your file for any possible malware in order to avoid code compromise and prevents signing of code if malware is detected.
           # On batch_sign command: If you are getting 'Error: hash needs to be scanned first before submitting for signing: <hash_value>', you can set this value to true
           malware_block: false
