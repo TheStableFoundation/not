@@ -16,8 +16,8 @@
       "icons/Square310x310Logo.png",
       "icons/StoreLogo.png"
     ],
+    "publisher": "Splitfire AB",
     "windows": {
-      "publisher": "Splitfire AB",
       "webviewInstallMode": {
         "type": "offlineInstaller"
       }
