@@ -175,14 +175,29 @@ jobs:
           # Code signing method. Default is v1. Supported values: v1, v2
           signing_method: v1
 
-      #- name: (Windows) Release
-      #  if: matrix.platform == 'windows-latest'
-      #  uses: softprops/action-gh-release@v2
-      #  with:
-      #    draft: true
-      #    body: "See the assets to download this version and install."
+      - name: (Windows) Extract version from tauri.prod-windows.conf.json
+        if: matrix.platform == 'windows-latest'
+        id: get_version
+        run: |
+          VERSION=$(jq -r .version src-tauri/tauri.prod-windows.conf.json)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-      - uses: tauri-apps/tauri-action@v0
+      - name: (Windows) Release
+        if: matrix.platform == 'windows-latest'
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          prerelease: false
+          body: "See the assets to download this version and install."
+          tag_name: app-v${{ env.VERSION }}-windows
+          name: "NotWallet Crypto v${{ env.VERSION }} (Windows)"
+          files: |
+            src-tauri/target/release/bundle/signed/*.msi
+            src-tauri/target/release/bundle/signed/*.exe
+            src-tauri/target/release/bundle/signed/*.zip
+
+      - name: (macOS, Linux) Release
+        uses: tauri-apps/tauri-action@v0
         if: matrix.platform != 'windows-latest'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
