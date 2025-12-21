@@ -178,9 +178,10 @@ jobs:
       - name: (Windows) Extract version from tauri.prod-windows.conf.json
         if: matrix.platform == 'windows-latest'
         id: get_version
+        shell: pwsh
         run: |
-          VERSION=$(jq -r .version src-tauri/tauri.prod-windows.conf.json)
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          $json = Get-Content src-tauri/tauri.prod-windows.conf.json | ConvertFrom-Json
+          echo "VERSION=$($json.version)" >> $env:GITHUB_ENV
 
       - name: (Windows) Release
         if: matrix.platform == 'windows-latest'
