@@ -1,7 +1,7 @@
 <!-- LOGO -->
 <h1>
 <p align="center">
-  <img src="./assets/app-icon-v4.png" alt="Logo" width="128">
+  <img src="./assets/app-icon.jpg" alt="Logo" width="128">
   <br>NotWallet Crypto
 </h1>
   <p align="center">
