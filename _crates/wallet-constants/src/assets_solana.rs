@@ -43,3 +43,119 @@ pub const ADDRESS_MSFTX: &str = "XspzcW1PRtgf6Wj92HCiZdjzKCyFekVD8P5Ueh3dRMX";
 pub const ADDRESS_NVDAX: &str = "Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh";
 #[tsync]
 pub const ADDRESS_TSLAX: &str = "XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB";
+#[tsync]
+pub const ADDRESS_ABTX: &str = "TODO"; // Abbott xStock
+#[tsync]
+pub const ADDRESS_ABBVX: &str = "TODO"; // AbbVie xStock
+#[tsync]
+pub const ADDRESS_ACNX: &str = "TODO"; // Accenture xStock
+#[tsync]
+pub const ADDRESS_AMBRX: &str = "TODO"; // Amber xStock
+#[tsync]
+pub const ADDRESS_APPX: &str = "TODO"; // AppLovin xStock
+#[tsync]
+pub const ADDRESS_AZNX: &str = "TODO"; // AstraZeneca xStock
+#[tsync]
+pub const ADDRESS_BACX: &str = "TODO"; // Bank of America xStock
+#[tsync]
+pub const ADDRESS_BRK_BX: &str = "TODO"; // Berkshire Hathaway xStock
+#[tsync]
+pub const ADDRESS_AVGOX: &str = "TODO"; // Broadcom xStock
+#[tsync]
+pub const ADDRESS_CVXX: &str = "TODO"; // Chevron xStock
+#[tsync]
+pub const ADDRESS_CRCLX: &str = "TODO"; // Circle xStock
+#[tsync]
+pub const ADDRESS_CSCOX: &str = "TODO"; // Cisco xStock
+#[tsync]
+pub const ADDRESS_KOX: &str = "TODO"; // Coca-Cola xStock
+#[tsync]
+pub const ADDRESS_COINX: &str = "TODO"; // Coinbase xStock
+#[tsync]
+pub const ADDRESS_CMCSAX: &str = "TODO"; // Comcast xStock
+#[tsync]
+pub const ADDRESS_CRWDX: &str = "TODO"; // CrowdStrike xStock
+#[tsync]
+pub const ADDRESS_DHRX: &str = "TODO"; // Danaher xStock
+#[tsync]
+pub const ADDRESS_DFDVX: &str = "TODO"; // DFDV xStock
+#[tsync]
+pub const ADDRESS_LLYX: &str = "TODO"; // Eli Lilly xStock
+#[tsync]
+pub const ADDRESS_XOMX: &str = "TODO"; // Exxon Mobil xStock
+#[tsync]
+pub const ADDRESS_GMEX: &str = "TODO"; // Gamestop xStock
+#[tsync]
+pub const ADDRESS_GLDX: &str = "TODO"; // Gold xStock
+#[tsync]
+pub const ADDRESS_GSX: &str = "TODO"; // Goldman Sachs xStock
+#[tsync]
+pub const ADDRESS_HDX: &str = "TODO"; // Home Depot xStock
+#[tsync]
+pub const ADDRESS_HONX: &str = "TODO"; // Honeywell xStock
+#[tsync]
+pub const ADDRESS_INTCX: &str = "TODO"; // Intel xStock
+#[tsync]
+pub const ADDRESS_IBMX: &str = "TODO"; // International Business Machines xStock
+#[tsync]
+pub const ADDRESS_JNJX: &str = "TODO"; // Johnson & Johnson xStock
+#[tsync]
+pub const ADDRESS_JPMX: &str = "TODO"; // JPMorgan Chase xStock
+#[tsync]
+pub const ADDRESS_LINX: &str = "TODO"; // Linde xStock
+#[tsync]
+pub const ADDRESS_MRVLX: &str = "TODO"; // Marvell xStock
+#[tsync]
+pub const ADDRESS_MAX: &str = "TODO"; // Mastercard xStock
+#[tsync]
+pub const ADDRESS_MCDX: &str = "TODO"; // McDonald's xStock
+#[tsync]
+pub const ADDRESS_MDTX: &str = "TODO"; // Medtronic xStock
+#[tsync]
+pub const ADDRESS_MRKX: &str = "TODO"; // Merck xStock
+#[tsync]
+pub const ADDRESS_MSTRX: &str = "TODO"; // MicroStrategy xStock
+#[tsync]
+pub const ADDRESS_QQQX: &str = "TODO"; // Nasdaq xStock
+#[tsync]
+pub const ADDRESS_NFLXX: &str = "TODO"; // Netflix xStock
+#[tsync]
+pub const ADDRESS_NVOX: &str = "TODO"; // Novo Nordisk xStock
+#[tsync]
+pub const ADDRESS_OPENX: &str = "TODO"; // OPEN xStock
+#[tsync]
+pub const ADDRESS_ORCLX: &str = "TODO"; // Oracle xStock
+#[tsync]
+pub const ADDRESS_PLTRX: &str = "TODO"; // Palantir xStock
+#[tsync]
+pub const ADDRESS_PEPX: &str = "TODO"; // PepsiCo xStock
+#[tsync]
+pub const ADDRESS_PFEX: &str = "TODO"; // Pfizer xStock
+#[tsync]
+pub const ADDRESS_PMX: &str = "TODO"; // Philip Morris xStock
+#[tsync]
+pub const ADDRESS_PGX: &str = "TODO"; // Procter & Gamble xStock
+#[tsync]
+pub const ADDRESS_HOODX: &str = "TODO"; // Robinhood xStock
+#[tsync]
+pub const ADDRESS_CRMX: &str = "TODO"; // Salesforce xStock
+#[tsync]
+pub const ADDRESS_SPYX: &str = "TODO"; // SP500 xStock
+#[tsync]
+pub const ADDRESS_STRCX: &str = "TODO"; // Strategy PP Variable xStock
+#[tsync]
+pub const ADDRESS_TBLLX: &str = "TODO"; // TBLL xStock
+#[tsync]
+pub const ADDRESS_TMOX: &str = "TODO"; // Thermo Fisher xStock
+#[tsync]
+pub const ADDRESS_TONXX: &str = "TODO"; // TON xStock
+#[tsync]
+pub const ADDRESS_TQQQX: &str = "TODO"; // TQQQ xStock
+#[tsync]
+pub const ADDRESS_UNHX: &str = "TODO"; // UnitedHealth xStock
+#[tsync]
+pub const ADDRESS_VTIX: &str = "TODO"; // Vanguard xStock
+#[tsync]
+pub const ADDRESS_VX: &str = "TODO"; // Visa xStock
+#[tsync]
+pub const ADDRESS_WMTX: &str = "TODO"; // Walmart xStock

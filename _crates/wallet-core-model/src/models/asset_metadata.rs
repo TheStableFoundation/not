@@ -2,10 +2,19 @@ use {
     crate::models::asset_solana::SolanaAsset,
     serde::{Deserialize, Serialize},
     smbcloud_wallet_constants::assets_solana::{
-        ADDRESS_AAPLX, ADDRESS_AMZNX, ADDRESS_BACH_TOKEN, ADDRESS_CBBTC, ADDRESS_EURC,
-        ADDRESS_GOOGLX, ADDRESS_JUPITER, ADDRESS_METAX, ADDRESS_MSFTX, ADDRESS_NVDAX, ADDRESS_SOL,
-        ADDRESS_TSLAX, ADDRESS_USD1, ADDRESS_USDC, ADDRESS_USDG, ADDRESS_USDS, ADDRESS_USDT,
-        ADDRESS_XBTC, ADDRESS_ZBTC,
+        ADDRESS_AAPLX, ADDRESS_ABBVX, ADDRESS_ABTX, ADDRESS_ACNX, ADDRESS_AMBRX, ADDRESS_AMZNX,
+        ADDRESS_APPX, ADDRESS_AVGOX, ADDRESS_AZNX, ADDRESS_BACH_TOKEN, ADDRESS_BACX,
+        ADDRESS_BRK_BX, ADDRESS_CBBTC, ADDRESS_CMCSAX, ADDRESS_COINX, ADDRESS_CRCLX, ADDRESS_CRMX,
+        ADDRESS_CRWDX, ADDRESS_CSCOX, ADDRESS_CVXX, ADDRESS_DFDVX, ADDRESS_DHRX, ADDRESS_EURC,
+        ADDRESS_GLDX, ADDRESS_GMEX, ADDRESS_GOOGLX, ADDRESS_GSX, ADDRESS_HDX, ADDRESS_HONX,
+        ADDRESS_HOODX, ADDRESS_IBMX, ADDRESS_INTCX, ADDRESS_JNJX, ADDRESS_JPMX, ADDRESS_JUPITER,
+        ADDRESS_KOX, ADDRESS_LINX, ADDRESS_LLYX, ADDRESS_MAX, ADDRESS_MCDX, ADDRESS_MDTX,
+        ADDRESS_METAX, ADDRESS_MRKX, ADDRESS_MRVLX, ADDRESS_MSFTX, ADDRESS_MSTRX, ADDRESS_NFLXX,
+        ADDRESS_NVDAX, ADDRESS_NVOX, ADDRESS_OPENX, ADDRESS_ORCLX, ADDRESS_PEPX, ADDRESS_PFEX,
+        ADDRESS_PGX, ADDRESS_PLTRX, ADDRESS_PMX, ADDRESS_QQQX, ADDRESS_SOL, ADDRESS_SPYX,
+        ADDRESS_STRCX, ADDRESS_TBLLX, ADDRESS_TMOX, ADDRESS_TONXX, ADDRESS_TQQQX, ADDRESS_TSLAX,
+        ADDRESS_UNHX, ADDRESS_USD1, ADDRESS_USDC, ADDRESS_USDG, ADDRESS_USDS, ADDRESS_USDT,
+        ADDRESS_VTIX, ADDRESS_VX, ADDRESS_WMTX, ADDRESS_XBTC, ADDRESS_XOMX, ADDRESS_ZBTC,
     },
     tsync::tsync,
 };
@@ -199,6 +208,528 @@ impl Metadata {
             symbol: "TSLAx".to_string(),
             decimal: 8,
             logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684aaf9559b2312c162731f5_Ticker%3DTSLA%2C%20Company%20Name%3DTesla%20Inc.%2C%20size%3D256x256.svg".to_string(),
+        }
+    }
+    pub fn abtx() -> Self {
+        Metadata {
+            address: ADDRESS_ABTX.to_string(),
+            name: "Abbott xStock".to_string(),
+            symbol: "ABTx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn abbvx() -> Self {
+        Metadata {
+            address: ADDRESS_ABBVX.to_string(),
+            name: "AbbVie xStock".to_string(),
+            symbol: "ABBVx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn acnx() -> Self {
+        Metadata {
+            address: ADDRESS_ACNX.to_string(),
+            name: "Accenture xStock".to_string(),
+            symbol: "ACNx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn ambrx() -> Self {
+        Metadata {
+            address: ADDRESS_AMBRX.to_string(),
+            name: "Amber xStock".to_string(),
+            symbol: "AMBRx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn appx() -> Self {
+        Metadata {
+            address: ADDRESS_APPX.to_string(),
+            name: "AppLovin xStock".to_string(),
+            symbol: "APPx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn aznx() -> Self {
+        Metadata {
+            address: ADDRESS_AZNX.to_string(),
+            name: "AstraZeneca xStock".to_string(),
+            symbol: "AZNx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn bacx() -> Self {
+        Metadata {
+            address: ADDRESS_BACX.to_string(),
+            name: "Bank of America xStock".to_string(),
+            symbol: "BACx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn brk_bx() -> Self {
+        Metadata {
+            address: ADDRESS_BRK_BX.to_string(),
+            name: "Berkshire Hathaway xStock".to_string(),
+            symbol: "BRK.Bx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn avgox() -> Self {
+        Metadata {
+            address: ADDRESS_AVGOX.to_string(),
+            name: "Broadcom xStock".to_string(),
+            symbol: "AVGOx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn cvxx() -> Self {
+        Metadata {
+            address: ADDRESS_CVXX.to_string(),
+            name: "Chevron xStock".to_string(),
+            symbol: "CVXx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn crclx() -> Self {
+        Metadata {
+            address: ADDRESS_CRCLX.to_string(),
+            name: "Circle xStock".to_string(),
+            symbol: "CRCLx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn cscox() -> Self {
+        Metadata {
+            address: ADDRESS_CSCOX.to_string(),
+            name: "Cisco xStock".to_string(),
+            symbol: "CSCOx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn kox() -> Self {
+        Metadata {
+            address: ADDRESS_KOX.to_string(),
+            name: "Coca-Cola xStock".to_string(),
+            symbol: "KOx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn coinx() -> Self {
+        Metadata {
+            address: ADDRESS_COINX.to_string(),
+            name: "Coinbase xStock".to_string(),
+            symbol: "COINx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn cmcsax() -> Self {
+        Metadata {
+            address: ADDRESS_CMCSAX.to_string(),
+            name: "Comcast xStock".to_string(),
+            symbol: "CMCSAx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn crwdx() -> Self {
+        Metadata {
+            address: ADDRESS_CRWDX.to_string(),
+            name: "CrowdStrike xStock".to_string(),
+            symbol: "CRWDx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn dhrx() -> Self {
+        Metadata {
+            address: ADDRESS_DHRX.to_string(),
+            name: "Danaher xStock".to_string(),
+            symbol: "DHRx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn dfdvx() -> Self {
+        Metadata {
+            address: ADDRESS_DFDVX.to_string(),
+            name: "DFDV xStock".to_string(),
+            symbol: "DFDVx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn llyx() -> Self {
+        Metadata {
+            address: ADDRESS_LLYX.to_string(),
+            name: "Eli Lilly xStock".to_string(),
+            symbol: "LLYx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn xomx() -> Self {
+        Metadata {
+            address: ADDRESS_XOMX.to_string(),
+            name: "Exxon Mobil xStock".to_string(),
+            symbol: "XOMx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn gmex() -> Self {
+        Metadata {
+            address: ADDRESS_GMEX.to_string(),
+            name: "Gamestop xStock".to_string(),
+            symbol: "GMEx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn gldx() -> Self {
+        Metadata {
+            address: ADDRESS_GLDX.to_string(),
+            name: "Gold xStock".to_string(),
+            symbol: "GLDx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn gsx() -> Self {
+        Metadata {
+            address: ADDRESS_GSX.to_string(),
+            name: "Goldman Sachs xStock".to_string(),
+            symbol: "GSx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn hdx() -> Self {
+        Metadata {
+            address: ADDRESS_HDX.to_string(),
+            name: "Home Depot xStock".to_string(),
+            symbol: "HDx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn honx() -> Self {
+        Metadata {
+            address: ADDRESS_HONX.to_string(),
+            name: "Honeywell xStock".to_string(),
+            symbol: "HONx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn intcx() -> Self {
+        Metadata {
+            address: ADDRESS_INTCX.to_string(),
+            name: "Intel xStock".to_string(),
+            symbol: "INTCx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn ibmx() -> Self {
+        Metadata {
+            address: ADDRESS_IBMX.to_string(),
+            name: "International Business Machines xStock".to_string(),
+            symbol: "IBMx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn jnjx() -> Self {
+        Metadata {
+            address: ADDRESS_JNJX.to_string(),
+            name: "Johnson & Johnson xStock".to_string(),
+            symbol: "JNJx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn jpmx() -> Self {
+        Metadata {
+            address: ADDRESS_JPMX.to_string(),
+            name: "JPMorgan Chase xStock".to_string(),
+            symbol: "JPMx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn linx() -> Self {
+        Metadata {
+            address: ADDRESS_LINX.to_string(),
+            name: "Linde xStock".to_string(),
+            symbol: "LINx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn mrvlx() -> Self {
+        Metadata {
+            address: ADDRESS_MRVLX.to_string(),
+            name: "Marvell xStock".to_string(),
+            symbol: "MRVLx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn max() -> Self {
+        Metadata {
+            address: ADDRESS_MAX.to_string(),
+            name: "Mastercard xStock".to_string(),
+            symbol: "MAx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn mcdx() -> Self {
+        Metadata {
+            address: ADDRESS_MCDX.to_string(),
+            name: "McDonald's xStock".to_string(),
+            symbol: "MCDx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn mdtx() -> Self {
+        Metadata {
+            address: ADDRESS_MDTX.to_string(),
+            name: "Medtronic xStock".to_string(),
+            symbol: "MDTx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn mrkx() -> Self {
+        Metadata {
+            address: ADDRESS_MRKX.to_string(),
+            name: "Merck xStock".to_string(),
+            symbol: "MRKx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn mstrx() -> Self {
+        Metadata {
+            address: ADDRESS_MSTRX.to_string(),
+            name: "MicroStrategy xStock".to_string(),
+            symbol: "MSTRx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn qqqx() -> Self {
+        Metadata {
+            address: ADDRESS_QQQX.to_string(),
+            name: "Nasdaq xStock".to_string(),
+            symbol: "QQQx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn nflxx() -> Self {
+        Metadata {
+            address: ADDRESS_NFLXX.to_string(),
+            name: "Netflix xStock".to_string(),
+            symbol: "NFLXx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn nvox() -> Self {
+        Metadata {
+            address: ADDRESS_NVOX.to_string(),
+            name: "Novo Nordisk xStock".to_string(),
+            symbol: "NVOx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn openx() -> Self {
+        Metadata {
+            address: ADDRESS_OPENX.to_string(),
+            name: "OPEN xStock".to_string(),
+            symbol: "OPENx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn orclx() -> Self {
+        Metadata {
+            address: ADDRESS_ORCLX.to_string(),
+            name: "Oracle xStock".to_string(),
+            symbol: "ORCLx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn pltrx() -> Self {
+        Metadata {
+            address: ADDRESS_PLTRX.to_string(),
+            name: "Palantir xStock".to_string(),
+            symbol: "PLTRx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn pepx() -> Self {
+        Metadata {
+            address: ADDRESS_PEPX.to_string(),
+            name: "PepsiCo xStock".to_string(),
+            symbol: "PEPx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn pfex() -> Self {
+        Metadata {
+            address: ADDRESS_PFEX.to_string(),
+            name: "Pfizer xStock".to_string(),
+            symbol: "PFEx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn pmx() -> Self {
+        Metadata {
+            address: ADDRESS_PMX.to_string(),
+            name: "Philip Morris xStock".to_string(),
+            symbol: "PMx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn pgx() -> Self {
+        Metadata {
+            address: ADDRESS_PGX.to_string(),
+            name: "Procter & Gamble xStock".to_string(),
+            symbol: "PGx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn hoodx() -> Self {
+        Metadata {
+            address: ADDRESS_HOODX.to_string(),
+            name: "Robinhood xStock".to_string(),
+            symbol: "HOODx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn crmx() -> Self {
+        Metadata {
+            address: ADDRESS_CRMX.to_string(),
+            name: "Salesforce xStock".to_string(),
+            symbol: "CRMx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn spyx() -> Self {
+        Metadata {
+            address: ADDRESS_SPYX.to_string(),
+            name: "SP500 xStock".to_string(),
+            symbol: "SPYx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn strcx() -> Self {
+        Metadata {
+            address: ADDRESS_STRCX.to_string(),
+            name: "Strategy PP Variable xStock".to_string(),
+            symbol: "STRCx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn tbllx() -> Self {
+        Metadata {
+            address: ADDRESS_TBLLX.to_string(),
+            name: "TBLL xStock".to_string(),
+            symbol: "TBLLx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn tmox() -> Self {
+        Metadata {
+            address: ADDRESS_TMOX.to_string(),
+            name: "Thermo Fisher xStock".to_string(),
+            symbol: "TMOx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn tonxx() -> Self {
+        Metadata {
+            address: ADDRESS_TONXX.to_string(),
+            name: "TON xStock".to_string(),
+            symbol: "TONXx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn tqqqx() -> Self {
+        Metadata {
+            address: ADDRESS_TQQQX.to_string(),
+            name: "TQQQ xStock".to_string(),
+            symbol: "TQQQx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn unhx() -> Self {
+        Metadata {
+            address: ADDRESS_UNHX.to_string(),
+            name: "UnitedHealth xStock".to_string(),
+            symbol: "UNHx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn vtix() -> Self {
+        Metadata {
+            address: ADDRESS_VTIX.to_string(),
+            name: "Vanguard xStock".to_string(),
+            symbol: "VTIx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn vx() -> Self {
+        Metadata {
+            address: ADDRESS_VX.to_string(),
+            name: "Visa xStock".to_string(),
+            symbol: "Vx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+        }
+    }
+    pub fn wmtx() -> Self {
+        Metadata {
+            address: ADDRESS_WMTX.to_string(),
+            name: "Walmart xStock".to_string(),
+            symbol: "WMTx".to_string(),
+            decimal: 8,
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
         }
     }
 }
