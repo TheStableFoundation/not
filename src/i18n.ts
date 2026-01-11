@@ -26,6 +26,7 @@ export interface Translation {
   quickActions: string;
   dao: string;
   learn: string;
+  tasks: string;
   activityFeed: string;
   bachAirdropLive: string;
   airdropDescription: string;
@@ -114,6 +115,8 @@ export interface Translation {
   thinking: string;
   aiDisclaimerMessage: string;
   frequentlyAskedQuestions: string;
+  // Learn page translations
+  tasksTitle: string;
   // FAQ questions and answers
   faqWhatIsStableFoundation: string;
   faqWhatIsStableFoundationAnswer: string;
@@ -350,6 +353,7 @@ export const translations: Record<SupportedLanguages, Translation> = {
     quickActions: "Quick Actions",
     dao: "DAO",
     learn: "Learn",
+    tasks: "Tasks",
     activityFeed: "Activity Feed",
     bachAirdropLive: "🪂 BACH Airdrop Live!",
     airdropDescription:
@@ -413,6 +417,8 @@ export const translations: Record<SupportedLanguages, Translation> = {
     aiDisclaimerMessage:
       "This is a demo AI assistant. Responses are simulated for educational purposes.",
     frequentlyAskedQuestions: "Frequently Asked Questions",
+    // Learn page translations
+    tasksTitle: "Tasks",
     // FAQ questions and answers
     faqWhatIsStableFoundation: "What is The Stable Foundation?",
     faqWhatIsStableFoundationAnswer:
@@ -615,6 +621,7 @@ export const translations: Record<SupportedLanguages, Translation> = {
     quickActions: "Snabbåtgärder",
     dao: "DAO",
     learn: "Lär dig",
+    tasks: "Uppgifter",
     activityFeed: "Aktivitetsflöde",
     bachAirdropLive: "🪂 BACH Airdrop Live!",
     airdropDescription:
@@ -723,6 +730,8 @@ export const translations: Record<SupportedLanguages, Translation> = {
     aiDisclaimerMessage:
       "Detta är en demo AI-assistent. Svar simuleras för utbildningsändamål.",
     frequentlyAskedQuestions: "Vanliga frågor",
+    // Learn page translations
+    tasksTitle: "Uppgifter",
     // FAQ questions and answers
     faqWhatIsStableFoundation: "Vad är The Stable Foundation?",
     faqWhatIsStableFoundationAnswer:
@@ -968,6 +977,7 @@ export const translations: Record<SupportedLanguages, Translation> = {
     quickActions: "Aksi Cepat",
     dao: "DAO",
     learn: "Belajar",
+    tasks: "Tugas",
     activityFeed: "Feed Aktivitas",
     bachAirdropLive: "🪂 Airdrop BACH Live!",
     airdropDescription:
@@ -1032,6 +1042,8 @@ export const translations: Record<SupportedLanguages, Translation> = {
     aiDisclaimerMessage:
       "Ini adalah asisten AI demo. Respons disimulasikan untuk tujuan edukasi.",
     frequentlyAskedQuestions: "Pertanyaan yang Sering Diajukan",
+    // Learn page translations
+    tasksTitle: "Tugas",
     // FAQ questions and answers
     faqWhatIsStableFoundation: "Apa itu The Stable Foundation?",
     faqWhatIsStableFoundationAnswer:
