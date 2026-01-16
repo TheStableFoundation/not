@@ -39,7 +39,7 @@ impl Metadata {
             name: "BACH Token".to_string(),
             symbol: "BACH".to_string(),
             decimal: 12,
-            logo_uri: "https://raw.githubusercontent.com/solana-labs/token-list/badd1dbe8c2d1e38c4f77b77f1d5fd5c60d3cccb/assets/mainnet/CTQBjyrX8pYyqbNa8vAhQfnRXfu9cUxnvrxj5PvbzTmf/bach-token-logo-Est.2022.png".to_string(),
+            logo_uri: "https://raw.githubusercontent.com/TheStableFoundation/notwallet/refs/heads/development/public/images/bach.png".to_string(),
         }
     }
     /// Bitcoin
@@ -81,7 +81,7 @@ impl Metadata {
             name: "Jupiter".to_string(),
             symbol: "JUP".to_string(),
             decimal: 6,
-            logo_uri: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN/logo.png".to_string(),
+            logo_uri: "https://raw.githubusercontent.com/TheStableFoundation/notwallet/refs/heads/development/public/images/jlp.png".to_string(),
         }
     }
     pub fn usdc() -> Self {
@@ -90,7 +90,7 @@ impl Metadata {
             name: "USD Coin".to_string(),
             symbol: "USDC".to_string(),
             decimal: 6,
-            logo_uri: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png".to_string(),
+            logo_uri: "https://raw.githubusercontent.com/TheStableFoundation/notwallet/refs/heads/development/public/images/usdc.png".to_string(),
         }
     }
     pub fn usdt() -> Self {
@@ -99,7 +99,7 @@ impl Metadata {
             name: "Tether USD".to_string(),
             symbol: "USDT".to_string(),
             decimal: 6,
-            logo_uri: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB/logo.svg".to_string(),
+            logo_uri: "https://raw.githubusercontent.com/TheStableFoundation/notwallet/refs/heads/development/public/images/usdt.png".to_string(),
         }
     }
     pub fn usdg() -> Self {
@@ -117,7 +117,7 @@ impl Metadata {
             name: "USDS".to_string(),
             symbol: "USDS".to_string(),
             decimal: 6,
-            logo_uri: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA/logo.svg".to_string(),
+            logo_uri: "https://raw.githubusercontent.com/TheStableFoundation/notwallet/refs/heads/development/public/images/usds.png".to_string(),
         }
     }
     pub fn usd1() -> Self {
@@ -126,7 +126,7 @@ impl Metadata {
             name: "USD1".to_string(),
             symbol: "USD1".to_string(),
             decimal: 6,
-            logo_uri: "https://cdn.usd1protocol.com/logo.png".to_string(),
+            logo_uri: "https://raw.githubusercontent.com/TheStableFoundation/notwallet/refs/heads/development/public/images/usd1.png".to_string(),
         }
     }
     pub fn eurc() -> Self {
@@ -135,7 +135,7 @@ impl Metadata {
             name: "Euro Coin".to_string(),
             symbol: "EURC".to_string(),
             decimal: 6,
-            logo_uri: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/HzwqbKZw8HxMN6bF2yFZNrht3c2iXXzpKcFu7uBEDKtr/logo.png".to_string(),
+            logo_uri: "https://raw.githubusercontent.com/TheStableFoundation/notwallet/refs/heads/development/public/images/eurc.png".to_string(),
         }
     }
     pub fn msftx() -> Self {
