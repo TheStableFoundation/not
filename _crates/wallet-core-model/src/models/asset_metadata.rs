@@ -216,7 +216,7 @@ impl Metadata {
             name: "Abbott xStock".to_string(),
             symbol: "ABTx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bf6359f8fa1d916afe97b_Ticker%3DABT%2C%20Company%20Name%3DAbbot%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn abbvx() -> Self {
@@ -225,7 +225,7 @@ impl Metadata {
             name: "AbbVie xStock".to_string(),
             symbol: "ABBVx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684be7c58986cdaeeee5bbba_Ticker%3DABBV%2C%20Company%20Name%3DSP500%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn acnx() -> Self {
@@ -234,7 +234,7 @@ impl Metadata {
             name: "Accenture xStock".to_string(),
             symbol: "ACNx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c0b0e15af8be8257db52f_Ticker%3DACN%2C%20Company%20Name%3Daccenture%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn ambrx() -> Self {
@@ -243,7 +243,7 @@ impl Metadata {
             name: "Amber xStock".to_string(),
             symbol: "AMBRx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/68652e463fd5d0c86d866c65_AMBRx.svg".to_string(),
         }
     }
     pub fn appx() -> Self {
@@ -252,7 +252,7 @@ impl Metadata {
             name: "AppLovin xStock".to_string(),
             symbol: "APPx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c0deccaecf631c0c174ea_Ticker%3DAPP%2C%20Company%20Name%3Dapp%20lovin%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn aznx() -> Self {
@@ -261,7 +261,7 @@ impl Metadata {
             name: "AstraZeneca xStock".to_string(),
             symbol: "AZNx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bf47b066fa1085ae953e9_Ticker%3DAZN%2C%20Company%20Name%3Dastrazeneca%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn bacx() -> Self {
@@ -270,7 +270,7 @@ impl Metadata {
             name: "Bank of America xStock".to_string(),
             symbol: "BACx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bf5a74604b4f162fd0efd_Ticker%3DBAC%2C%20Company%20Name%3DBank%20of%20America%20Corporation%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn brk_bx() -> Self {
@@ -279,7 +279,7 @@ impl Metadata {
             name: "Berkshire Hathaway xStock".to_string(),
             symbol: "BRK.Bx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684ab977b76d1a151f09c858_Ticker%3DBRK.B%2C%20Company%20Name%3Dberkshire-hathaway%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn avgox() -> Self {
@@ -288,7 +288,7 @@ impl Metadata {
             name: "Broadcom xStock".to_string(),
             symbol: "AVGOx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684aaef288f41927892d12c1_Ticker%3DAVGO%2C%20Company%20Name%3DBroadcom%20Inc.%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn cvxx() -> Self {
@@ -297,7 +297,7 @@ impl Metadata {
             name: "Chevron xStock".to_string(),
             symbol: "CVXx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684be50accfbb14c64319124_Ticker%3DCVX%2C%20Company%20Name%3Dchevron%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn crclx() -> Self {
@@ -306,7 +306,7 @@ impl Metadata {
             name: "Circle xStock".to_string(),
             symbol: "CRCLx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/6861ae6944c62c8dd3a0e165_CRCLx.svg".to_string(),
         }
     }
     pub fn cscox() -> Self {
@@ -315,7 +315,7 @@ impl Metadata {
             name: "Cisco xStock".to_string(),
             symbol: "CSCOx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bec77bfaeef7ac61f7231_Ticker%3DCSCO%2C%20Company%20Name%3DCisco%20Systems%20Inc.%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn kox() -> Self {
@@ -324,7 +324,7 @@ impl Metadata {
             name: "Coca-Cola xStock".to_string(),
             symbol: "KOx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684beb344604b4f162f66f93_Ticker%3DCOKE%2C%20Company%20Name%3DCokeCola%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn coinx() -> Self {
@@ -333,7 +333,7 @@ impl Metadata {
             name: "Coinbase xStock".to_string(),
             symbol: "COINx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c131b2d6d8cbe9e61a3dc_Ticker%3DCOIN%2C%20Company%20Name%3DCoinbase%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn cmcsax() -> Self {
@@ -342,7 +342,7 @@ impl Metadata {
             name: "Comcast xStock".to_string(),
             symbol: "CMCSAx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bfbe3db57e5f5f6b277aa_Ticker%3DCMCSA%2C%20Company%20Name%3DComcast%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn crwdx() -> Self {
@@ -351,7 +351,7 @@ impl Metadata {
             name: "CrowdStrike xStock".to_string(),
             symbol: "CRWDx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c10fbaf9d90e3d974ae23_Ticker%3DCRWD%2C%20Company%20Name%3DCrowdstrike%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn dhrx() -> Self {
@@ -360,7 +360,7 @@ impl Metadata {
             name: "Danaher xStock".to_string(),
             symbol: "DHRx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bfa59ce8102ff96cee2fe_Ticker%3DDHR%2C%20Company%20Name%3DSP500%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn dfdvx() -> Self {
@@ -369,7 +369,7 @@ impl Metadata {
             name: "DFDV xStock".to_string(),
             symbol: "DFDVx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/6861b8b7beb9cf856e2332d5_DFDVx.svg".to_string(),
         }
     }
     pub fn llyx() -> Self {
@@ -378,7 +378,7 @@ impl Metadata {
             name: "Eli Lilly xStock".to_string(),
             symbol: "LLYx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684ad0eaa9a1efe9b1b7155a_Ticker%3DLLY%2C%20Company%20Name%3DLilly%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn xomx() -> Self {
@@ -387,7 +387,7 @@ impl Metadata {
             name: "Exxon Mobil xStock".to_string(),
             symbol: "XOMx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684abe960ee12e238c0a1f0b_Ticker%3DXOM%2C%20Company%20Name%3DExxonMobil%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn gmex() -> Self {
@@ -396,7 +396,7 @@ impl Metadata {
             name: "Gamestop xStock".to_string(),
             symbol: "GMEx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c125f1c48a3dab4c66137_Ticker%3DGME%2C%20Company%20Name%3Dgamestop%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn gldx() -> Self {
@@ -405,7 +405,7 @@ impl Metadata {
             name: "Gold xStock".to_string(),
             symbol: "GLDx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/685123a7747987b071b10d47_Ticker%3DGLD%2C%20Company%20Name%3DGold%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn gsx() -> Self {
@@ -414,7 +414,7 @@ impl Metadata {
             name: "Goldman Sachs xStock".to_string(),
             symbol: "GSx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c114972ed2d868a1b3f95_Ticker%3DGS%2C%20Company%20Name%3DGoldman%20Sachs%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn hdx() -> Self {
@@ -423,7 +423,7 @@ impl Metadata {
             name: "Home Depot xStock".to_string(),
             symbol: "HDx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684be484171c0a11201e098d_Ticker%3DHD%2C%20Company%20Name%3DHome%20Depot%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn honx() -> Self {
@@ -432,7 +432,7 @@ impl Metadata {
             name: "Honeywell xStock".to_string(),
             symbol: "HONx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c08d12385ea1da806a5bb_Ticker%3DHON%2C%20Company%20Name%3DSP500%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn intcx() -> Self {
@@ -441,7 +441,7 @@ impl Metadata {
             name: "Intel xStock".to_string(),
             symbol: "INTCx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c0a334cac334b4a41651b_Ticker%3DINTC%2C%20Company%20Name%3DIntel%20Corp%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn ibmx() -> Self {
@@ -450,7 +450,7 @@ impl Metadata {
             name: "International Business Machines xStock".to_string(),
             symbol: "IBMx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bfb32f7000e98d733283f_Ticker%3DIBM%2C%20Company%20Name%3DIBM%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn jnjx() -> Self {
@@ -459,7 +459,7 @@ impl Metadata {
             name: "Johnson & Johnson xStock".to_string(),
             symbol: "JNJx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684ace98941130a24503a315_Ticker%3DJNJ%2C%20Company%20Name%3Djohnson-johnson%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn jpmx() -> Self {
@@ -468,7 +468,7 @@ impl Metadata {
             name: "JPMorgan Chase xStock".to_string(),
             symbol: "JPMx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684acf34c10a7e0add155c61_Ticker%3DJPM%2C%20Company%20Name%3DJPMorganChase%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn linx() -> Self {
@@ -477,7 +477,7 @@ impl Metadata {
             name: "Linde xStock".to_string(),
             symbol: "LINx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bf2b1132313f4529a3160_Ticker%3DLIN%2C%20Company%20Name%3DSP500%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn mrvlx() -> Self {
@@ -486,7 +486,7 @@ impl Metadata {
             name: "Marvell xStock".to_string(),
             symbol: "MRVLx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c0eb412d3850c2c01cd29_Ticker%3DMRVL%2C%20Company%20Name%3DSP500%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn max() -> Self {
@@ -495,7 +495,7 @@ impl Metadata {
             name: "Mastercard xStock".to_string(),
             symbol: "MAx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684ad1ca13c7aaa9ece4cbbf_Ticker%3DMA%2C%20Company%20Name%3DMastercard%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn mcdx() -> Self {
@@ -504,7 +504,7 @@ impl Metadata {
             name: "McDonald's xStock".to_string(),
             symbol: "MCDx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bf77838b45bb94ff32be7_Ticker%3DMCD%2C%20Company%20Name%3DMcDonalds%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn mdtx() -> Self {
@@ -513,7 +513,7 @@ impl Metadata {
             name: "Medtronic xStock".to_string(),
             symbol: "MDTx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bfc99a86580de629510e9_Ticker%3DMDT%2C%20Company%20Name%3DMedtronic%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn mrkx() -> Self {
@@ -522,7 +522,7 @@ impl Metadata {
             name: "Merck xStock".to_string(),
             symbol: "MRKx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684be6ff5bd0a5643adf85ec_Ticker%3DMRK%2C%20Company%20Name%3DMerck%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn mstrx() -> Self {
@@ -531,7 +531,7 @@ impl Metadata {
             name: "MicroStrategy xStock".to_string(),
             symbol: "MSTRx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c0d47eee3a9c3fa12475a_Ticker%3DMSTR%2C%20Company%20Name%3DMicroStrategy%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn qqqx() -> Self {
@@ -540,7 +540,7 @@ impl Metadata {
             name: "Nasdaq xStock".to_string(),
             symbol: "QQQx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/68511cb6e367f19f06664527_QQQx.svg".to_string(),
         }
     }
     pub fn nflxx() -> Self {
@@ -549,7 +549,7 @@ impl Metadata {
             name: "Netflix xStock".to_string(),
             symbol: "NFLXx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bf6c149d917d503f6cda6_Ticker%3DNFLX%2C%20Company%20Name%3DNetflix%20Inc.%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn nvox() -> Self {
@@ -558,7 +558,7 @@ impl Metadata {
             name: "Novo Nordisk xStock".to_string(),
             symbol: "NVOx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bf139788d618501b65727_Ticker%3DNOVO_B%2C%20Company%20Name%3DSP500%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn openx() -> Self {
@@ -567,7 +567,7 @@ impl Metadata {
             name: "OPEN xStock".to_string(),
             symbol: "OPENx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/688cb3ec1f3801d9bc17729e_Ticker%3DOPENx%2C%20Company%20Name%3DOpendoor%2C%20Size%3D32x32.svg".to_string(),
         }
     }
     pub fn orclx() -> Self {
@@ -576,7 +576,7 @@ impl Metadata {
             name: "Oracle xStock".to_string(),
             symbol: "ORCLx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bf1ecae4eb4a817da9941_Ticker%3DORCL%2C%20Company%20Name%3DSP500%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn pltrx() -> Self {
@@ -585,7 +585,7 @@ impl Metadata {
             name: "Palantir xStock".to_string(),
             symbol: "PLTRx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c0c4c0e5466272c52958b_Ticker%3DPLTR%2C%20Company%20Name%3DSP500%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn pepx() -> Self {
@@ -594,7 +594,7 @@ impl Metadata {
             name: "PepsiCo xStock".to_string(),
             symbol: "PEPx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684be8662b90a208c5d5b8e5_Ticker%3DPEP%2C%20Company%20Name%3DPepsico%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn pfex() -> Self {
@@ -603,7 +603,7 @@ impl Metadata {
             name: "Pfizer xStock".to_string(),
             symbol: "PFEx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684be5e3c54ff3f5c6c9b36f_Ticker%3DPFE%2C%20Company%20Name%3Dpfizer%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn pmx() -> Self {
@@ -612,7 +612,7 @@ impl Metadata {
             name: "Philip Morris xStock".to_string(),
             symbol: "PMx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c0981cbec78a581a6bfe7_Ticker%3DPM%2C%20Company%20Name%3Dphilip%20morris%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn pgx() -> Self {
@@ -621,7 +621,7 @@ impl Metadata {
             name: "Procter & Gamble xStock".to_string(),
             symbol: "PGx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684be3c6fa6a62fb260a51e3_Ticker%3DPG%2C%20Company%20Name%3DProctor%20%26%20Gamble%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn hoodx() -> Self {
@@ -630,7 +630,7 @@ impl Metadata {
             name: "Robinhood xStock".to_string(),
             symbol: "HOODx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684c0f39cede10b9afa4852f_Ticker%3DHOOD%2C%20Company%20Name%3DRobinhood%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn crmx() -> Self {
@@ -639,7 +639,7 @@ impl Metadata {
             name: "Salesforce xStock".to_string(),
             symbol: "CRMx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bf3670e24ef4c92a6a7fc_Ticker%3DCRM%2C%20Company%20Name%3DSP500%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn spyx() -> Self {
@@ -648,7 +648,7 @@ impl Metadata {
             name: "SP500 xStock".to_string(),
             symbol: "SPYx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/685116624ae31d5ceb724895_Ticker%3DSPX%2C%20Company%20Name%3DSP500%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn strcx() -> Self {
@@ -657,7 +657,7 @@ impl Metadata {
             name: "Strategy PP Variable xStock".to_string(),
             symbol: "STRCx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/693d66a2b661bfc9971dcdac_Ticker%3DSTRCx%2C%20Company%20Name%3DStrategy%20PP%20Variable%2C%20Size%3D32x32.svg".to_string(),
         }
     }
     pub fn tbllx() -> Self {
@@ -666,7 +666,7 @@ impl Metadata {
             name: "TBLL xStock".to_string(),
             symbol: "TBLLx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/688cb5a681cc1775c4cd3cae_Ticker%3DTBLLx%2C%20Company%20Name%3DInvesco%2C%20Size%3D32x32.svg".to_string(),
         }
     }
     pub fn tmox() -> Self {
@@ -675,7 +675,7 @@ impl Metadata {
             name: "Thermo Fisher xStock".to_string(),
             symbol: "TMOx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bf4d930b0fdc50503056d_Ticker%3DTMO%2C%20Company%20Name%3DThermo_Fisher_Scientific%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn tonxx() -> Self {
@@ -684,7 +684,7 @@ impl Metadata {
             name: "TON xStock".to_string(),
             symbol: "TONXx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/68d7db29223cfd256ebb952c_Ticker%3DTONx%2C%20Company%20Name%3DTON%2C%20Size%3D32x32.svg".to_string(),
         }
     }
     pub fn tqqqx() -> Self {
@@ -693,7 +693,7 @@ impl Metadata {
             name: "TQQQ xStock".to_string(),
             symbol: "TQQQx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/685125548a5829b9b59a6156_TQQQx.svg".to_string(),
         }
     }
     pub fn unhx() -> Self {
@@ -702,7 +702,7 @@ impl Metadata {
             name: "UnitedHealth xStock".to_string(),
             symbol: "UNHx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684abb4c69185d8a871e2ab5_Ticker%3DUNH%2C%20Company%20Name%3DUnited%20Health%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn vtix() -> Self {
@@ -711,7 +711,7 @@ impl Metadata {
             name: "Vanguard xStock".to_string(),
             symbol: "VTIx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/68511e335ee1314f602d9a7c_Ticker%3DVTI%2C%20Company%20Name%3DVanguard%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn vx() -> Self {
@@ -720,7 +720,7 @@ impl Metadata {
             name: "Visa xStock".to_string(),
             symbol: "Vx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684acfd76eb8395c6d1d2210_Ticker%3DV%2C%20Company%20Name%3DVisa%2C%20size%3D256x256.svg".to_string(),
         }
     }
     pub fn wmtx() -> Self {
@@ -729,7 +729,7 @@ impl Metadata {
             name: "Walmart xStock".to_string(),
             symbol: "WMTx".to_string(),
             decimal: 8,
-            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/TODO".to_string(),
+            logo_uri: "https://cdn.prod.website-files.com/655f3efc4be468487052e35a/684bebd366d5089b2da3cf7e_Ticker%3DWMT%2C%20Company%20Name%3DWalmart%2C%20size%3D256x256.svg".to_string(),
         }
     }
 }
