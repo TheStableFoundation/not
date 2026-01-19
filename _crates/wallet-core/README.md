@@ -1,4 +1,4 @@
-# smbcloud-wallet-kit
+# smbcloud-wallet-core
 
 Part of [smbCloud Web3](https://github.com/TheStableFoundation/notwallet/tree/development/_crates).
 
