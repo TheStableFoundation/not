@@ -32,6 +32,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { debug, error } from "@tauri-apps/plugin-log";
 import ScanPage from "@app/wallet/scan/page";
 import { AccountProvider } from "@app/lib/context/account-context";
+import TasksPage from "@app/home/tasks/page";
 
 export default function App() {
   const location = useLocation();
@@ -81,6 +82,14 @@ export default function App() {
                   element={
                     <AnimatedPage>
                       <LearnPage />
+                    </AnimatedPage>
+                  }
+                />
+                <Route
+                  path="/home/tasks"
+                  element={
+                    <AnimatedPage>
+                      <TasksPage />
                     </AnimatedPage>
                   }
                 />

@@ -1,13 +1,13 @@
 pub fn mainnet_rpc_url() -> String {
-    dotenv!("SOLANA_MAINNET_RPC_BASE_URL").to_string()
+    "https://api.mainnet-beta.solana.com".to_string()
 }
 
 pub fn testnet_rpc_url() -> String {
-    dotenv!("SOLANA_TESTNET_RPC_BASE_URL").to_string()
+    "https://api.testnet.solana.com".to_string()
 }
 
 pub fn devnet_rpc_url() -> String {
-    dotenv!("SOLANA_DEVNET_RPC_BASE_URL").to_string()
+    "https://api.devnet.solana.com".to_string()
 }
 
 pub fn local_rpc_url() -> String {

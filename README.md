@@ -1,7 +1,7 @@
 <!-- LOGO -->
 <h1>
 <p align="center">
-  <img src="./assets/app-icon-v4.png" alt="Logo" width="128">
+  <img src="./assets/app-icon.jpg" alt="Logo" width="128">
   <br>NotWallet Crypto
 </h1>
   <p align="center">
@@ -25,6 +25,7 @@ Not just a crypto wallet: remittance, payment, DAO, DeFi. You name it.
 
 - [Apple App Store](https://apps.apple.com/se/app/notwallet-crypto/id6749607570)
 - [Google Play Store](https://play.google.com/store/apps/details?id=xyz.notwallet.NotWallet)
+- [Microsoft Store](https://apps.microsoft.com/detail/xpdcnnd1ql3vm7)
 - [Apple App Store (Apple Watch only)](https://apps.apple.com/se/app/notwallet-crypto-watch/id6749650386)
 
 ---

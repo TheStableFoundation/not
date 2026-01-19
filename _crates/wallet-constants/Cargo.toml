@@ -1,9 +1,15 @@
 [package]
 name = "smbcloud-wallet-constants"
-version = "1.0.6"
+version = "1.0.9"
 edition = "2021"
 description = "smbCloud Wallet Constants for NotWallet Crypto."
+authors = ["smbCloud Team <smbcloud@setoelkahfi.se>"]
 license = "MIT"
+homepage = "https://github.com/TheStableFoundation/notwallet/tree/development/_crates/wallet-constants"
+repository = "https://github.com/TheStableFoundation/notwallet/"
+documentation = "https://github.com/TheStableFoundation/notwallet/tree/main/docs"
+keywords = ["solana", "wallet", "crypto"]
+readme = "README.md"
 
 [lib]
 crate-type = ["lib", "cdylib", "staticlib"]
@@ -11,4 +17,3 @@ name = "smbcloud_wallet_constants"
 
 [dependencies]
 tsync = "2"
-dotenv_codegen = "0.15"

@@ -1,4 +1,4 @@
-name: "Release Desktop"
+name: "Release macOS & Linux"
 
 on:
   push:
@@ -41,7 +41,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: 1.90
-          # Those targets are only used on macos runners so it's in an `if` to slightly speed up windows and linux builds.
+          # Those targets are only used on macos runners so it's in an `if` to slightly speed up linux builds.
           targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
 
       - name: Install Ubuntu dependencies
@@ -49,12 +49,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libwebkit2gtk-4.1-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
-
-      - name: (Windows) Install NASM
-        if: matrix.platform == 'windows-latest' # This must match the platform value defined above.
-        uses: ilammy/setup-nasm@v1
-        with:
-          platform: 'win64'
 
       - name: Import Apple Developer Certificate
         if: matrix.platform == 'macos-latest'
@@ -83,8 +77,8 @@ jobs:
       - name: (macOS) Create .p8 file
         if: matrix.platform == 'macos-latest'
         run: |
-            mkdir -p ~/.appstoreconnect/private_keys
-            echo "${{ secrets.APPLE_API_KEY_STRING }}" > ~/.appstoreconnect/private_keys/AuthKey_${{ secrets.APPLE_API_KEY }}.p8
+          mkdir -p ~/.appstoreconnect/private_keys
+          echo "${{ secrets.APPLE_API_KEY_STRING }}" > ~/.appstoreconnect/private_keys/AuthKey_${{ secrets.APPLE_API_KEY }}.p8
       - name: Install frontend dependencies
         run: pnpm install
 
@@ -97,9 +91,18 @@ jobs:
           echo BIRDEYE_API_KEY=${{ secrets.BIRDEYE_API_KEY }} >> .env
           echo GOOGLE_OAUTH_CLIENT_SECRET=${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }} >> .env
           echo GOOGLE_OAUTH_CLIENT_ID=${{ secrets.GOOGLE_OAUTH_CLIENT_ID }} >> .env
+          echo API_BASE_URL=${{ secrets.API_BASE_URL }} >> .env
+          echo API_BASE_URL_LOCAL=${{ secrets.API_BASE_URL_LOCAL }} >> .env
+          echo XLP_BASE_URL=${{ secrets.XLP_BASE_URL }} >> .env
+          echo XLP_BASE_URL_LOCAL=${{ secrets.XLP_BASE_URL_LOCAL }} >> .env
+          echo XLP_API_KEY=${{ secrets.XLP_API_KEY }} >> .env
+          echo DEPLOY_KEY=${{ secrets.DEPLOY_KEY }} >> .env
+          echo STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }} >> .env
+          echo STRIPE_PUBLISHABLE_KEY=${{ secrets.STRIPE_PUBLISHABLE_KEY }} >> .env
           cat .env
 
-      - uses: tauri-apps/tauri-action@v0
+      - name: Release
+        uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
