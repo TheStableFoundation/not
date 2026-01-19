@@ -1,6 +1,6 @@
 [package]
 name = "smbcloud-wallet-core-model"
-version = "1.0.7"
+version = "1.0.9"
 edition = "2021"
 description = "smbCloud Wallet Core Model for NotWallet Crypto."
 authors = ["smbCloud Team <smbcloud@setoelkahfi.se>"]
