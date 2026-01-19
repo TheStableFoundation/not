@@ -8,15 +8,15 @@
 
 - [Apple AppStore](https://apps.apple.com/se/app/notwallet-crypto/id6749607570?l=en-GB)
 - [Google Play Store](https://play.google.com/store/apps/details?id=xyz.notwallet.NotWallet&hl=en-US)
+- [Microsoft Store](https://apps.microsoft.com/detail/xpdcnnd1ql3vm7)
 - [Apple AppStore (Apple Watch only)](https://apps.apple.com/se/app/notwallet-crypto-watch/id6749650386)
 
-Below is non comprehensive list of officially supported builds. You can always [build NotWallet Crypto from source](docs).
+Below is non comprehensive list of officially supported builds. You can always [build NotWallet Crypto from source](https://github.com/TheStableFoundation/notwallet/tree/main/docs).
 
 - Tier 1: iOS.
 - Tier 2: macOS, Android.
-- Tier 3: watchOS, tvOS, Linux, Windows.
-- Experimental: wearOS.
-- Planned: Garmin OS
+- Tier 3: Linux, Windows.
+- Experimental: watchOS, tvOS, wearOS, Garmin OS
 
 ## Development Workflow
 
