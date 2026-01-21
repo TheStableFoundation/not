@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import SchoolIcon from "@mui/icons-material/School";
-import TaskIcon from '@mui/icons-material/Task';
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import { useLang } from "../../../src/LanguageContext";
 import { useNavigate } from "react-router-dom";
@@ -74,11 +73,6 @@ export default function HorizontalMenu() {
   const handleLearn = async () => {
     await selectionFeedback();
     router("/home/learn");
-  };
-
-  const handleTasks = async () => {
-    await selectionFeedback();
-    router("/home/tasks");
   };
 
   const menuItems = [
