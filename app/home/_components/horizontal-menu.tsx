@@ -88,11 +88,6 @@ export default function HorizontalMenu() {
       onClick: handleLearn,
     },
     {
-      icon: <TaskIcon fontSize="medium" />,
-      label: t.tasks,
-      onClick: handleTasks,
-    },
-    {
       icon: <AccountBalanceIcon fontSize="medium" />,
       label: t.dao,
       onClick: handleDAO,
