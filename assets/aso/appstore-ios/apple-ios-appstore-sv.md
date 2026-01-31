@@ -28,6 +28,10 @@ Kom igång på några sekunder:
 
 Din krypto. Dina nycklar.
 
+## What's new in this version
+
+Buggfixar och prestandaförbättringar
+
 ## Keywords
 
 solana,crypto wallet,noncustodial,defi,web3,selfcustody,token swap,blockchain

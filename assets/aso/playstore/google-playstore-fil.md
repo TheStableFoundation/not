@@ -31,3 +31,7 @@ Magsimula sa loob ng ilang segundo:
 3. Magpadala, tumanggap, mag-stake, at tuklasin ang DeFi
 
 Ang iyong crypto. Ang iyong keys.
+
+## What's new in this version
+
+Mga bug fixes at pagpapabuti sa performance

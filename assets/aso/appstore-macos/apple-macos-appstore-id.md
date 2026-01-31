@@ -29,6 +29,10 @@ Mulai dalam hitungan detik:
 
 Kriptomu. Kuncimu. Mac-mu.
 
+## What's new in this version
+
+Perbaikan bug dan peningkatan performa
+
 ## Keywords
 
 solana,kripto,dompet,non kustodial,self custody,crypto wallet,web3,defi,swap token,sol wallet

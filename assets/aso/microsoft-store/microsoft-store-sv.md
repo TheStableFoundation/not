@@ -1,4 +1,4 @@
-# NotWallet Kryptosjälvförvaring 
+# NotWallet Kryptosjälvförvaring
 
 ## Short Desc
 
@@ -23,3 +23,7 @@ Varför välja NotWallet?
 - Snabb, säker och användarvänlig upplevelse.
 
 Kom igång nu! Ladda ner NotWallet och bli en del av framtidens decentraliserade ekonomi.
+
+## What's new in this version
+
+Buggfixar och prestandaförbättringar

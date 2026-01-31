@@ -23,3 +23,7 @@ Características principales:
 - Experiencia rápida, segura y fácil de usar.
 
 ¡Empieza ahora! Descarga NotWallet y sé parte del futuro de las finanzas descentralizadas.
+
+## What's new in this version
+
+Corrección de errores y mejoras de rendimiento

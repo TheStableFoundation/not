@@ -29,6 +29,10 @@ Kom igång på några sekunder:
 
 Din krypto. Dina nycklar. Din Mac.
 
+## What's new in this version
+
+Buggfixar och prestandaförbättringar
+
 ## Keywords
 
 solana,krypto,plånbok,non custodial,självförvaring,defi,web3,crypto wallet,token swap,sol wallet

@@ -31,3 +31,7 @@ Get started in seconds:
 3. Send, receive, stake, and explore DeFi
 
 Your crypto. Your keys.
+
+## What's new in this version
+
+Bug fixes and performance improvements

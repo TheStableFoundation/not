@@ -29,3 +29,7 @@ Kom igång:
 3. Skicka, stake och utforska Web3
 
 Din krypto. Ditt ansvar.
+
+## What's new in this version
+
+Buggfixar och prestandaförbättringar

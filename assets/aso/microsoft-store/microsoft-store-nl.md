@@ -23,3 +23,7 @@ Waarom kiezen voor NotWallet?
 - Snel, veilig en gebruiksvriendelijk.
 
 Begin nu! Download NotWallet en word onderdeel van de toekomst van gedecentraliseerde financiën.
+
+## What's new in this version
+
+Bugfixes en prestatieverbeteringen

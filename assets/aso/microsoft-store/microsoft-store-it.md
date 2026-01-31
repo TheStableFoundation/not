@@ -23,3 +23,7 @@ Perché scegliere NotWallet?
 - Esperienza veloce, sicura e facile da usare.
 
 Inizia ora! Scarica NotWallet ed entra nel futuro della finanza decentralizzata.
+
+## What's new in this version
+
+Correzioni di bug e miglioramenti delle prestazioni

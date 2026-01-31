@@ -28,6 +28,10 @@ Magsimula sa loob ng ilang segundo:
 
 Ang iyong crypto. Ang iyong keys.
 
+## What's new in this version
+
+Mga bug fixes at pagpapabuti sa performance
+
 ## Keywords
 
 solana,crypto wallet,noncustodial,defi,web3,selfcustody,token swap,blockchain

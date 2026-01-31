@@ -26,6 +26,10 @@ Cara mulai:
 
 Kriptomu, asetmu.
 
+## What's new in this version
+
+Perbaikan bug dan peningkatan performa
+
 ## Keywords
 
 solana,kripto,dompet,non kustodial,self custody,crypto wallet,defi,web3,swap token,sol wallet

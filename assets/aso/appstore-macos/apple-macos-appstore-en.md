@@ -29,6 +29,10 @@ Get started in seconds:
 
 Your crypto. Your keys. Your Mac.
 
+## What's new in this version
+
+Bug fixes and performance improvements
+
 ## Keywords
 
 solana,crypto wallet,noncustodial,defi,web3,selfcustody,token swap,blockchain

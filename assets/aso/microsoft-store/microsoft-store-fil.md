@@ -27,3 +27,7 @@ Bakit Pipiliin ang NotWallet?
 - Mag-enjoy ng mabilis, secure, at user-friendly na karanasan.
 
 I-download ang NotWallet ngayon at sumali sa kinabukasan ng decentralized finance!
+
+## What's new in this version
+
+Mga bug fixes at pagpapabuti sa performance

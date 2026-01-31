@@ -29,3 +29,7 @@ Cara mulai:
 3. Kirim, staking, dan jelajahi Web3
 
 Kriptomu, asetmu.
+
+## What's new in this version
+
+Perbaikan bug dan peningkatan performa
