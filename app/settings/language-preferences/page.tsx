@@ -12,7 +12,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import { useLang } from "../../../src/LanguageContext";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
 import { haptics } from "@app/lib/utils/haptics";
-import { SupportedLanguages } from "@src/i18n";
+import { SupportedLanguages } from "@app/lib/utils/i18n";
 
 export default function LanguagePreferencesPage() {
   const { t, lang, setLang } = useLang();
