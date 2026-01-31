@@ -1,10 +1,12 @@
-# NotWallet Crypto Self-Custody
+# Appname (max 30 characters)
 
-## Short Description
+NotWallet Crypto Self-Custody
+
+## Short description (max 80 characters)
 
 Non-Custodial · DeFi · Web3
 
-## Description
+# Full description (max 4000 characters)
 
 Take full control of your crypto. NotWallet Crypto Self-Custody is a self-custody wallet for Solana — no middlemen, no restrictions.
 
@@ -29,3 +31,7 @@ Get started in seconds:
 3. Send, receive, stake, and explore DeFi
 
 Your crypto. Your keys.
+
+## What's new in this version
+
+Bug fixes and performance improvements

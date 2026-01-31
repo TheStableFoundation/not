@@ -23,3 +23,7 @@ Warum NotWallet wählen?
 - Schnelle, sichere und benutzerfreundliche Erfahrung.
 
 Starte jetzt! Lade NotWallet herunter und werde Teil der dezentralen Finanzwelt.
+
+## What's new in this version
+
+Fehlerbehebungen und Leistungsverbesserungen

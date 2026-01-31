@@ -1,6 +1,8 @@
-# NotWallet Crypto Self-Custody
+# App Name
 
-## Short Description
+NotWallet Crypto Self-Custody
+
+## Short description (270 characters or fewer)
 
 Non-Custodial · DeFi · Web3
 
@@ -25,3 +27,7 @@ Why Choose NotWallet?
 - Enjoy a fast, secure, and user-friendly experience.
 
 Download NotWallet today and join the future of decentralized finance!
+
+## What's new in this version
+
+Bug fixes and performance improvements
