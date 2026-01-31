@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import Navbar from "@src/components/navbar";
-import AnimatedPage from "@src/components/animated-page";
+import AnimatedPage from "@app/lib/components/animated-page";
 import HomePage from "@app/home/page";
 import DAOPage from "@app/home/dao/page";
 import LearnPage from "@app/home/learn/page";
