@@ -1,54 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+>
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <!-- AndroidTV support -->
-    <uses-feature android:name="android.software.leanback" android:required="false" />
-    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
-    <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
-    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
-    <uses-feature android:name="android.hardware.camera" android:required="false"/>
-    <uses-feature android:name="android.hardware.nfc" android:required="false"/>
-    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
-    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
-    <uses-feature android:name="android.hardware.sensor" android:required="false"/>
-    <!-- Some TV devices have an ethernet connection only -->
-    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false"
+    />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false"
+    />
+    <uses-feature
+        android:name="android.hardware.faketouch"
+        android:required="false"
+    />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"
+    />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"
+    />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false"
+    />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false"
+    />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false"
+    />
+    <uses-feature
+        android:name="android.hardware.sensor"
+        android:required="false"
+    />
+    <!-- Some TV devices have an a connection only -->
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false"
+    />
 
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.notwallet"
-        android:usesCleartextTraffic="${usesCleartextTraffic}">
+        android:usesCleartextTraffic="${usesCleartextTraffic}"
+    >
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
             android:launchMode="singleTask"
             android:label="@string/main_activity_title"
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
                 <!-- AndroidTV support -->
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <category
+                    android:name="android.intent.category.LEANBACK_LAUNCHER"
+                />
             </intent-filter>
         </activity>
 
         <provider
-          android:name="androidx.core.content.FileProvider"
-          android:authorities="${applicationId}.fileprovider"
-          android:exported="false"
-          android:grantUriPermissions="true">
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+        >
           <meta-data
-            android:name="android.support.FILE_PROVIDER_PATHS"
-            android:resource="@xml/file_paths" />
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+            />
         </provider>
-
-        <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
-        <!-- Production AdMod app ID: your-admob-app-id -->
-        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-8869993014420242~2960773397"/>
-        <meta-data android:name="com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT" android:value="true"/>
     </application>
 </manifest>
