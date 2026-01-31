@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import * as Tooltip from "@radix-ui/react-tooltip";
-import { useLang } from "../../app/lib/context/LanguageContext";
+import { useLang } from "../../app/lib/context/language-context";
 import { debug } from "@tauri-apps/plugin-log";
 import { haptics } from "@app/lib/utils/haptics";
 import { useNetworkEnvironment } from "@app/lib/context/network-environment-context";
