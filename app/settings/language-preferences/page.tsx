@@ -134,6 +134,8 @@ export default function LanguagePreferencesPage() {
                   <option value="en">English</option>
                   <option value="sv">Svenska</option>
                   <option value="id">Bahasa Indonesia</option>
+                  <option value="fil">Filipino</option>
+                  <option value="ar">العربية</option>
                 </select>
               </Box>
             </ListItem>
