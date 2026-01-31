@@ -21,9 +21,9 @@
     "baseUrl": ".",
     "paths": {
       "@src/*": ["src/*"],
-      "@app/*": ["app/*"]
-    }
+      "@app/*": ["app/*"],
+    },
   },
   "include": ["src/**/*", "app/**/*"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
 }
