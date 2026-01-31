@@ -12,7 +12,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { UPDATE_USERNAME } from "@app/lib/commands";
 import CircularProgress from "@mui/material/CircularProgress";
 import Alert from "@mui/material/Alert";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 
 interface EditKeyPairModalProps {
   open: boolean;

@@ -16,7 +16,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { SEND_TOKEN } from "@app/lib/commands";
 import CircularProgress from "@mui/material/CircularProgress";
 import Alert from "@mui/material/Alert";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 import { useNetworkEnvironment } from "@app/lib/context/network-environment-context";
 import { AssetIcon } from "@app/lib/components/token-icons";
 import { debug } from "@tauri-apps/plugin-log";

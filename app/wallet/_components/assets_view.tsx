@@ -15,7 +15,7 @@ import { invoke } from "@tauri-apps/api/core";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import IconButton from "@mui/material/IconButton";
 import { openUrl } from "@tauri-apps/plugin-opener";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import { error } from "@tauri-apps/plugin-log";

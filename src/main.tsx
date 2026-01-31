@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
-import { LanguageProvider } from "./LanguageContext";
+import { LanguageProvider } from "../app/lib/context/language-context";
 import { AirdropEnvironmentProvider } from "@app/lib/context/app-environment-context";
 import { XlpEnvironmentProvider } from "@app/lib/context/xlp-environment-context";
 import { NetworkEnvironmentProvider } from "@app/lib/context/network-environment-context";

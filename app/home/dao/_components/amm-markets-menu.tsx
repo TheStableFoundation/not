@@ -9,7 +9,7 @@ import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import { openUrl } from "@tauri-apps/plugin-opener";
 import { markets } from "./amm-markets";
 import { TokenIcon } from "./amm-token-info";
-import { useLang } from "../../../../src/LanguageContext";
+import { useLang } from "../../../lib/context/language-context";
 
 interface MarketItemProps {
   baseToken: string;

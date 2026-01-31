@@ -9,10 +9,10 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import LanguageIcon from "@mui/icons-material/Language";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
 import { haptics } from "@app/lib/utils/haptics";
-import { SupportedLanguages } from "@src/i18n";
+import { SupportedLanguages } from "@app/lib/utils/i18n";
 
 export default function LanguagePreferencesPage() {
   const { t, lang, setLang } = useLang();
@@ -134,6 +134,8 @@ export default function LanguagePreferencesPage() {
                   <option value="en">English</option>
                   <option value="sv">Svenska</option>
                   <option value="id">Bahasa Indonesia</option>
+                  <option value="fil">Filipino</option>
+                  <option value="ar">العربية</option>
                 </select>
               </Box>
             </ListItem>

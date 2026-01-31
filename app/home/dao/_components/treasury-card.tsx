@@ -12,7 +12,7 @@ import {
   THE_STABLE_FOUNDATION_TREASURY_WALLET_FEE,
 } from "@app/lib/crate/generated";
 import { openDaoExplorer } from "@app/lib/helper";
-import { useLang } from "../../../../src/LanguageContext";
+import { useLang } from "../../../lib/context/language-context";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 
 export default function TreasuryCard() {

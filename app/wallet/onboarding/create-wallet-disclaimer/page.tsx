@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
 import { useNavigate } from "react-router-dom";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 
 export default function WalletOnboardingCreateWalletDisclaimerPage() {
   const router = useNavigate();

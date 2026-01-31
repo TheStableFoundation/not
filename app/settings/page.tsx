@@ -24,7 +24,7 @@ import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import Confetti from "react-confetti";
 import { invoke } from "@tauri-apps/api/core";
 import { useNavigate } from "react-router-dom";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 
 type SettingItem = {
   id: string;

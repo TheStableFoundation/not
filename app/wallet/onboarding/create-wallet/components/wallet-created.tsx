@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 
 type WalletCreatedProps = {
   mnemonic: string;

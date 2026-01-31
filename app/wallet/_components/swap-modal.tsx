@@ -33,7 +33,7 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import { AssetIcon } from "@app/lib/components/token-icons";
 import { info, debug } from "@tauri-apps/plugin-log";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 import { useNetworkEnvironment } from "@app/lib/context/network-environment-context";
 import { ListItemIcon, ListItemText } from "@mui/material";
 

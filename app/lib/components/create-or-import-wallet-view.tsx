@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";

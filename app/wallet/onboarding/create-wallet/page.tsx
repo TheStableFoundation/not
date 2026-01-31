@@ -26,7 +26,7 @@ import Confetti from "react-confetti";
 import { store } from "@app/lib/store/store";
 import { Suspense } from "react";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 
 enum State {
   Idle = "Idle",

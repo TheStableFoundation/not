@@ -22,4 +22,8 @@ Pourquoi choisir NotWallet ?
 - Un portefeuille qui évolue avec sa communauté.
 - Expérience rapide, sécurisée et conviviale.
 
-Commencez dès maintenant ! Téléchargez NotWallet et rejoignez l’avenir de la finance décentralisée.
+Commencez dès maintenant ! Téléchargez NotWallet et rejoignez l'avenir de la finance décentralisée.
+
+## What's new in this version
+
+Corrections de bugs et améliorations des performances

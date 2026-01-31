@@ -9,7 +9,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import DestroyWalletsModal from "./destroy-wallets-modal";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import SettingListItem from "./setting-list-item";
-import { useLang } from "../../../../src/LanguageContext";
+import { useLang } from "../../../lib/context/language-context";
 import { useNavigate } from "react-router-dom";
 
 export default function DestroyWalletsCard() {

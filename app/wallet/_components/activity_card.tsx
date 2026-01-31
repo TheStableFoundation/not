@@ -8,7 +8,7 @@ import Tab from "@mui/material/Tab";
 import { BalanceV1, SolanaWallet } from "@app/lib/crate/generated";
 import AssetsView from "./assets_view";
 import ActivityView from "./activity_view";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 
 interface TabPanelProps {
   children?: React.ReactNode;

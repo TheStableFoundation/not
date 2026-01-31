@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import { SolanaWallet } from "@app/lib/crate/generated";
 import { invoke } from "@tauri-apps/api/core";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 
 interface ActiveKeypairSelectionProps {
   open: boolean;

@@ -17,7 +17,7 @@ import PaletteOutlinedIcon from "@mui/icons-material/PaletteOutlined";
 import LanguageIcon from "@mui/icons-material/Language";
 import { useColorScheme } from "@mui/material/styles";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 
 export default function AppPreferences() {
   const { mode, setMode } = useColorScheme();

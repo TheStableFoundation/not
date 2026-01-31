@@ -15,7 +15,7 @@ import EditKeyPairModal from "../_components/edit-keypair-modal";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
 import SettingListItem from "./_components/setting-list-item";
 import DestroyWalletsCard from "./_components/destroy-wallets-card";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 import { useNavigate } from "react-router-dom";
 import { SolanaWallet, STORE_ACTIVE_KEYPAIR } from "@app/lib/crate/generated";
 import { store } from "@app/lib/store/store";

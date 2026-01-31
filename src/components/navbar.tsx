@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import * as Tooltip from "@radix-ui/react-tooltip";
-import { useLang } from "../LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 import { debug } from "@tauri-apps/plugin-log";
 import { haptics } from "@app/lib/utils/haptics";
 import { useNetworkEnvironment } from "@app/lib/context/network-environment-context";
@@ -9,7 +9,7 @@ import { Typography } from "@mui/material";
 
 interface NavItem {
   path: string;
-  key:  "home" | "wallet" | "settings";
+  key: "home" | "wallet" | "settings";
   icon: React.ReactElement;
 }
 
@@ -60,9 +60,9 @@ const navItems: NavItem[] = [
 
 export default function Navbar() {
   const location = useLocation();
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const { environment } = useNetworkEnvironment();
-  const isRTL = false;
+  const isRTL = lang === "ar";
 
   const isActivePath = (path: string) => {
     debug(`Current path: ${location.pathname}`);
@@ -134,7 +134,10 @@ export default function Navbar() {
       </div>
 
       {/* Bottom tab navigation */}
-      <nav className="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t z-40 shadow-lg bottom-nav-safe">
+      <nav
+        className="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t z-40 shadow-lg bottom-nav-safe"
+        dir={isRTL ? "rtl" : "ltr"}
+      >
         <div className="max-w-2xl mx-auto flex justify-around items-center px-4 py-2 w-full">
           {navItems.map((item) => (
             <Tooltip.Root key={item.path} delayDuration={100}>
@@ -151,9 +154,7 @@ export default function Navbar() {
                   style={{ minWidth: 60 }}
                 >
                   {item.icon}
-                  <span className="text-xs">
-                    {t[item.key]}
-                  </span>
+                  <span className="text-xs">{t[item.key]}</span>
                 </Link>
               </Tooltip.Trigger>
               <Tooltip.Portal>

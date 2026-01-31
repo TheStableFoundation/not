@@ -1,10 +1,10 @@
-# NotWallet Självförvaring av Krypto
+# NotWallet Kryptosjälvförvaring
 
-## Kort beskrivning
+## Short Desc
 
 Icke-förvarad · DeFi · Web3
 
-## Beskrivning Svenska
+## Description
 
 Upplev full kontroll över dina krypto-tillgångar med NotWallet – den säkra, transparenta och community-drivna Solana-plånboken utan förvaringsansvar.
 
@@ -23,3 +23,7 @@ Varför välja NotWallet?
 - Snabb, säker och användarvänlig upplevelse.
 
 Kom igång nu! Ladda ner NotWallet och bli en del av framtidens decentraliserade ekonomi.
+
+## What's new in this version
+
+Buggfixar och prestandaförbättringar

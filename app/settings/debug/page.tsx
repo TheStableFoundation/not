@@ -15,7 +15,7 @@ import {
   Select,
   Typography,
 } from "@mui/material";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
 import { debug, error } from "@tauri-apps/plugin-log";
 import { AirdropEnvironment, XlpEnvironment } from "@app/lib/crate/generated";

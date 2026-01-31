@@ -12,7 +12,7 @@ import { SolanaWallet } from "@app/lib/crate/generated";
 import { IMPORT_SOLANA_WALLET } from "@app/lib/commands";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
 import { useNavigate } from "react-router-dom";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 
 export default function WalletOnboardingImportWalletPage() {
   const [seed, setSeed] = React.useState("");

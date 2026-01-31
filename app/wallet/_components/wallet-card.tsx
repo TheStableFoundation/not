@@ -26,7 +26,7 @@ import { GET_ALL_KEYPAIRS, GET_WALLET_BALANCE } from "@app/lib/commands";
 import SendModal from "./send-modal";
 import SwapModal from "./swap-modal";
 import { error } from "@tauri-apps/plugin-log";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useXlpEnvironment } from "@app/lib/context/xlp-environment-context";
 import QrCodeIcon from "@mui/icons-material/QrCode";

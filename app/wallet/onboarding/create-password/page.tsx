@@ -18,7 +18,7 @@ import { STORE_PASSWORD } from "@app/lib/crate/generated";
 import bcrypt from "bcryptjs";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import { useNavigate } from "react-router-dom";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 
 enum State {
   Loading,

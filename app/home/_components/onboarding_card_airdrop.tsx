@@ -11,7 +11,7 @@ import { openUrl } from "@tauri-apps/plugin-opener";
 import { invoke } from "@tauri-apps/api/core";
 import Confetti from "react-confetti";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 import { useAirdropEnvironment } from "@app/lib/context/app-environment-context";
 
 type OnboardingCardAirdropProps = {

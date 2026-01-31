@@ -7,7 +7,7 @@ import TreasuryCard from "./_components/treasury-card";
 import ProposalsCard from "./_components/proposals-card";
 import InfoCard from "./_components/info-card";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 
 export default function DAOPage() {
   const { t } = useLang();

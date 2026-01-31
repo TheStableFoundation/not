@@ -23,3 +23,7 @@ Kenapa Pilih NotWallet?
 - Pengalaman transaksi yang cepat, aman, dan mudah digunakan.
 
 Mulai sekarang juga! Unduh NotWallet dan jadilah bagian dari masa depan keuangan terdesentralisasi.
+
+## What's new in this version
+
+Perbaikan bug dan peningkatan performa

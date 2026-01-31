@@ -6,7 +6,7 @@ import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CircularProgress from "@mui/material/CircularProgress";
-import { useLang } from "../../../../src/LanguageContext";
+import { useLang } from "../../../lib/context/language-context";
 import { Button } from "@mui/material";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import { openDaoExplorer } from "@app/lib/helper";

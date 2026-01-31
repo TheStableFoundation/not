@@ -9,7 +9,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import { openUrl } from "@tauri-apps/plugin-opener";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 
 export default function AboutPage() {
   const { t } = useLang();

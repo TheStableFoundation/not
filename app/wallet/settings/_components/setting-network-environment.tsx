@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import List from "@mui/material/List";
-import { useLang } from "../../../../src/LanguageContext";
+import { useLang } from "../../../lib/context/language-context";
 import { Environment } from "@app/lib/crate/generated";
 import { CircularProgress, FormControl, MenuItem, Select } from "@mui/material";
 import React from "react";

@@ -16,7 +16,7 @@ import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import CircularProgress from "@mui/material/CircularProgress";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
 import { useNavigate } from "react-router-dom";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 
 export default function WalletOnboardingImportKeypairsPage() {
   const [keypairs, setKeypairs] = React.useState<SolanaWallet[]>([]);

@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import * as Tooltip from "@radix-ui/react-tooltip";
-import Navbar from "@src/components/Navbar";
-import AnimatedPage from "@src/components/AnimatedPage";
+import Navbar from "@src/components/navbar";
+import AnimatedPage from "@app/lib/components/animated-page";
 import HomePage from "@app/home/page";
 import DAOPage from "@app/home/dao/page";
 import LearnPage from "@app/home/learn/page";
@@ -28,6 +28,7 @@ import LanguagePreferencesPage from "@app/settings/language-preferences/page";
 import DebugPage from "@app/settings/debug/page";
 import { useAirdropEnvironment } from "@app/lib/context/app-environment-context";
 import { useEffect } from "react";
+import { useLang } from "@app/lib/context/language-context";
 import { invoke } from "@tauri-apps/api/core";
 import { debug, error } from "@tauri-apps/plugin-log";
 import ScanPage from "@app/wallet/scan/page";
@@ -36,7 +37,13 @@ import TasksPage from "@app/home/tasks/page";
 
 export default function App() {
   const location = useLocation();
+  const { lang } = useLang();
   const { environment, isInitialized } = useAirdropEnvironment();
+
+  // ensure document direction matches selected language (RTL for Arabic)
+  useEffect(() => {
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  }, [lang]);
 
   const registerClient = async () => {
     try {
@@ -56,7 +63,10 @@ export default function App() {
   return (
     <Tooltip.Provider>
       <AppLockProvider>
-        <div className="bg-gradient-to-tr from-fuchsia-100 to-sky-100 min-h-screen w-full font-sans relative safe-area">
+        <div
+          className="bg-gradient-to-tr from-fuchsia-100 to-sky-100 min-h-screen w-full font-sans relative safe-area"
+          dir={lang === "ar" ? "rtl" : "ltr"}
+        >
           <Navbar />
           <main className="py-4 bottom-nav-safe max-w-2xl mx-auto px-4">
             <AccountProvider>

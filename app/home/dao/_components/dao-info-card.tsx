@@ -18,7 +18,7 @@ import {
 } from "@app/lib/crate/generated";
 import { openDaoExplorer } from "@app/lib/helper";
 import { AssetIcon } from "@app/lib/components/token-icons";
-import { useLang } from "../../../../src/LanguageContext";
+import { useLang } from "../../../lib/context/language-context";
 import { useNetworkEnvironment } from "@app/lib/context/network-environment-context";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 

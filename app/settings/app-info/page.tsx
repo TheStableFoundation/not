@@ -14,7 +14,7 @@ import FingerprintIcon from "@mui/icons-material/Fingerprint";
 import { getVersion } from "@tauri-apps/api/app";
 import { invoke } from "@tauri-apps/api/core";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/language-context";
 
 export default function AppInfoPage() {
   const { t } = useLang();

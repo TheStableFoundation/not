@@ -1,6 +1,6 @@
 [package]
 name = "notwallet"
-version = "1.1.0"
+version = "1.0.0"
 description = "Solana non-custodial wallet, stable coin payment platform, and more 🔐"
 authors = ["info@bach.money"]
 edition = "2021"
@@ -30,8 +30,8 @@ reqwest = { version = "0.12", default-features = false, features = [
     "native-tls-vendored",
 ] }
 serde = { version = "1", features = ["derive"] }
-serde_qs = "0.15"
 serde_json = "1"
+serde_qs = "0.15"
 smbcloud-model = "0.3"
 smbcloud-networking-account = "0.3"
 smbcloud-wallet-constants = { path = "./../_crates/wallet-constants" }
@@ -63,7 +63,6 @@ tauri-plugin-barcode-scanner = "2"
 
 # Android-only dependencies
 [target.'cfg(target_os = "android")'.dependencies]
-tauri-plugin-admob = { git = "https://github.com/setoelkahfi/tauri-plugin-admob.git", branch = "feature/android-update-deps" }
 tauri-plugin-android-tv-check = "1"
 
 [build-dependencies]

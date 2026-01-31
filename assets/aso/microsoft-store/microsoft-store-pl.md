@@ -23,3 +23,7 @@ Dlaczego warto wybrać NotWallet?
 - Szybkie, bezpieczne i wygodne użytkowanie.
 
 Zacznij już teraz! Pobierz NotWallet i dołącz do przyszłości zdecentralizowanych finansów.
+
+## What's new in this version
+
+Poprawki błędów i usprawnienia wydajności
