@@ -4166,7 +4166,6 @@ dependencies = [
  "solana-signer 3.0.0",
  "tauri",
  "tauri-build",
- "tauri-plugin-admob",
  "tauri-plugin-android-tv-check",
  "tauri-plugin-barcode-scanner",
  "tauri-plugin-clipboard-manager",
@@ -11503,17 +11502,6 @@ dependencies = [
  "tauri-utils",
  "toml 0.9.11+spec-1.1.0",
  "walkdir",
-]
-
-[[package]]
-name = "tauri-plugin-admob"
-version = "0.0.4"
-source = "git+https://github.com/setoelkahfi/tauri-plugin-admob.git?branch=feature%2Fandroid-update-deps#41c6750238b50612de69a4a8b8cc716663e13381"
-dependencies = [
- "serde",
- "tauri",
- "tauri-plugin",
- "thiserror 2.0.17",
 ]
 
 [[package]]
