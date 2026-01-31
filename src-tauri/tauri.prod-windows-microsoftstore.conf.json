@@ -1,7 +1,7 @@
 {
   "productName": "NotWallet",
   "identifier": "xyz.notwallet.NotWallet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "bundle": {
     "icon": [
       "icons/icon.ico",
