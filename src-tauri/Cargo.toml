@@ -1,6 +1,6 @@
 [package]
 name = "notwallet"
-version = "1.1.0"
+version = "1.0.0"
 description = "Solana non-custodial wallet, stable coin payment platform, and more 🔐"
 authors = ["info@bach.money"]
 edition = "2021"

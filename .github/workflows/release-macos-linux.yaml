@@ -110,7 +110,7 @@ jobs:
           APPLE_SIGNING_IDENTITY: ${{ env.CERT_ID }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
         with:
-          releaseName: "NotWallet Crypto v__VERSION__"
+          releaseName: "NotWallet Crypto v__VERSION__ (macOS, Linux)"
           tagName: app-v__VERSION__
           releaseBody: "See the assets to download this version and install."
           releaseDraft: true
