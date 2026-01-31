@@ -19,7 +19,7 @@ import { store } from "@app/lib/store/store";
 import { openUrl } from "@tauri-apps/plugin-opener";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
 import { debug, error, error as logError } from "@tauri-apps/plugin-log";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/LanguageContext";
 import { useAirdropEnvironment } from "@app/lib/context/app-environment-context";
 import {
   OauthRedirect,
