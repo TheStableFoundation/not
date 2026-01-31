@@ -40,17 +40,17 @@ jobs:
       - name: Install Rust stable
         uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: 1.90
+          toolchain: 1.92
           # Those targets are only used on macos runners so it's in an `if` to slightly speed up linux builds.
           targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
 
-      - name: Install Ubuntu dependencies
+      - name: (Linux) Install Ubuntu dependencies
         if: matrix.platform == 'ubuntu-22.04' # This must match the platform value defined above.
         run: |
           sudo apt-get update
           sudo apt-get install -y libwebkit2gtk-4.1-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
 
-      - name: Import Apple Developer Certificate
+      - name: (macOS) Import Apple Developer Certificate
         if: matrix.platform == 'macos-latest'
         env:
           APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
