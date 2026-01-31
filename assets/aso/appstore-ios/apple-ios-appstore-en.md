@@ -1,12 +1,10 @@
-# NotWallet Crypto Self-Custody
+## Promotional Text
 
-## Subtitle
-
-Non-Custodial · DeFi · Web3
+Trade tokens instantly and earn rewards while securing the Solana network. Your keys, your crypto, your freedom.
 
 ## Description
 
-Take full control of your crypto on Mac. NotWallet Crypto Self-Custody is a self-custody wallet for Solana — no middlemen, no restrictions.
+Take full control of your crypto. NotWallet Crypto Self-Custody is a self-custody wallet for Solana — no middlemen, no restrictions.
 
 Features:
 
@@ -15,8 +13,7 @@ Features:
 • Token Swap: Exchange tokens instantly within the app.
 • Staking: Help secure the network and earn rewards.
 • Web3 & DeFi: Connect to dApps, NFT marketplaces, and more.
-• Security: Biometric authentication, local encryption, and zero data collection.
-• Native macOS Experience: Optimized for Mac with seamless performance.
+• Security: Biometric lock, local encryption, and zero data collection.
 
 Why NotWallet Crypto Self-Custody?
 
@@ -29,7 +26,7 @@ Get started in seconds:
 2. Create or import your wallet
 3. Send, receive, stake, and explore DeFi
 
-Your crypto. Your keys. Your Mac.
+Your crypto. Your keys.
 
 ## Keywords
 

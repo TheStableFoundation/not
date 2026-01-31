@@ -1,8 +1,6 @@
-# NotWallet Kripto Self-Custody
+## Promotional Text
 
-## Subtitle
-
-Non-Kustodial · DeFi · Web3
+Tukar token langsung dan dapatkan imbalan sambil mengamankan jaringan Solana. Kuncimu, kriptomu, kebebasanmu.
 
 ## Description
 

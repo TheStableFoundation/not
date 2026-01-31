@@ -1,12 +1,10 @@
-# NotWallet Kryptosjälvförvaring
+## Promotional Text
 
-## Subtitle
-
-Självförvaring · DeFi · Web3
+Handla tokens direkt och tjäna belöningar samtidigt som du säkrar Solana-nätverket. Dina nycklar, din krypto, din frihet.
 
 ## Description
 
-Ta full kontroll över din krypto. NotWallet Kryptosjälvförvaring är en självsörjande plånbok för Solana — inga mellanhänder, inga begränsningar.
+Ta full kontroll över din krypto på Mac. NotWallet Kryptosjälvförvaring är en självsörjande plånbok för Solana — inga mellanhänder, inga begränsningar.
 
 Funktioner:
 
@@ -15,7 +13,8 @@ Funktioner:
 • Token-byte: Byt tokens direkt i appen.
 • Staking: Hjälp till att säkra nätverket och tjäna belöningar.
 • Web3 & DeFi: Anslut till dApps, NFT-marknadsplatser och mer.
-• Säkerhet: Biometriskt lås, lokal kryptering och noll datainsamling.
+• Säkerhet: Biometrisk autentisering, lokal kryptering och noll datainsamling.
+• Ursprunglig macOS-upplevelse: Optimerad för Mac med sömlös prestanda.
 
 Varför NotWallet Kryptosjälvförvaring?
 
@@ -28,8 +27,8 @@ Kom igång på några sekunder:
 2. Skapa eller importera din plånbok
 3. Skicka, ta emot, staka och utforska DeFi
 
-Din krypto. Dina nycklar.
+Din krypto. Dina nycklar. Din Mac.
 
 ## Keywords
 
-solana,crypto wallet,noncustodial,defi,web3,selfcustody,token swap,blockchain
+solana,krypto,plånbok,non custodial,självförvaring,defi,web3,crypto wallet,token swap,sol wallet

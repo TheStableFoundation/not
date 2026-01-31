@@ -1,10 +1,10 @@
-# NotWallet Självförvaring av Krypto
+# NotWallet Kryptosjälvförvaring 
 
-## Kort beskrivning
+## Short Desc
 
 Icke-förvarad · DeFi · Web3
 
-## Beskrivning Svenska
+## Description
 
 Upplev full kontroll över dina krypto-tillgångar med NotWallet – den säkra, transparenta och community-drivna Solana-plånboken utan förvaringsansvar.
 
