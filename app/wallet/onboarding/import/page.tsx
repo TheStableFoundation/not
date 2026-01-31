@@ -14,7 +14,7 @@ import { debug } from "@tauri-apps/plugin-log";
 import { useNavigate } from "react-router-dom";
 import { SolanaWallet } from "@app/lib/crate/generated";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
-import { useLang } from "@src/LanguageContext";
+import { useLang } from "@app/lib/context/LanguageContext";
 
 export default function WalletOnboardingImportPage() {
   const [seed, setSeed] = React.useState("");

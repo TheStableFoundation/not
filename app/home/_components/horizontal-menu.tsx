@@ -7,7 +7,7 @@ import Tooltip from "@mui/material/Tooltip";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import SchoolIcon from "@mui/icons-material/School";
 import { selectionFeedback } from "@tauri-apps/plugin-haptics";
-import { useLang } from "../../../src/LanguageContext";
+import { useLang } from "../../lib/context/LanguageContext";
 import { useNavigate } from "react-router-dom";
 
 interface MenuItemProps {

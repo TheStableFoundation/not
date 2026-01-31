@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import * as Tooltip from "@radix-ui/react-tooltip";
-import { useLang } from "../LanguageContext";
+import { useLang } from "../../app/lib/context/LanguageContext";
 import { debug } from "@tauri-apps/plugin-log";
 import { haptics } from "@app/lib/utils/haptics";
 import { useNetworkEnvironment } from "@app/lib/context/network-environment-context";
@@ -9,7 +9,7 @@ import { Typography } from "@mui/material";
 
 interface NavItem {
   path: string;
-  key:  "home" | "wallet" | "settings";
+  key: "home" | "wallet" | "settings";
   icon: React.ReactElement;
 }
 
@@ -151,9 +151,7 @@ export default function Navbar() {
                   style={{ minWidth: 60 }}
                 >
                   {item.icon}
-                  <span className="text-xs">
-                    {t[item.key]}
-                  </span>
+                  <span className="text-xs">{t[item.key]}</span>
                 </Link>
               </Tooltip.Trigger>
               <Tooltip.Portal>
