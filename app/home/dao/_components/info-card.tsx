@@ -2,7 +2,7 @@
 
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
-import { useLang } from "../../../lib/context/LanguageContext";
+import { useLang } from "../../../lib/context/language-context";
 
 export default function InfoCard() {
   const { t } = useLang();

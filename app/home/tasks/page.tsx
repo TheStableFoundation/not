@@ -10,7 +10,7 @@ import Card from "@mui/material/Card";
 import LinearProgress from "@mui/material/LinearProgress";
 import Divider from "@mui/material/Divider";
 import PageChildrenTitleBar from "@app/lib/components/page-children-title-bar";
-import { useLang } from "@app/lib/context/LanguageContext";
+import { useLang } from "@app/lib/context/language-context";
 
 // Demo data: Replace with real task data from your backend
 interface Task {
