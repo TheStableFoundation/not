@@ -44,6 +44,14 @@
       "icons/Square310x310Logo.png",
       "icons/StoreLogo.png"
     ],
+    "macOS": {
+      "entitlements": "Entitlements.plist",
+      "exceptionDomain": "",
+      "frameworks": [],
+      "providerShortName": null,
+      "signingIdentity": null,
+      "minimumSystemVersion": "14.0"
+    },
     "android": {
       "minSdkVersion": 24,
       "versionCode": 3030
@@ -51,13 +59,6 @@
     "iOS": {
       "minimumSystemVersion": "16.0",
       "developmentTeam": "your_team_id"
-    },
-    "macOS": {
-      "entitlements": null,
-      "exceptionDomain": "",
-      "frameworks": [],
-      "providerShortName": null,
-      "signingIdentity": null
     }
   }
 }
