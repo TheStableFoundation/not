@@ -3,6 +3,7 @@ import * as Tooltip from "@radix-ui/react-tooltip";
 import Navbar from "@src/components/navbar";
 import AnimatedPage from "@app/lib/components/animated-page";
 import HomePage from "@app/home/page";
+import ChatPage from "@app/chat/page";
 import DAOPage from "@app/home/dao/page";
 import LearnPage from "@app/home/learn/page";
 import WalletHome from "@app/wallet/page";
@@ -73,6 +74,14 @@ export default function App() {
               <Routes location={location} key={location.pathname}>
                 <Route
                   path="/"
+                  element={
+                    <AnimatedPage>
+                      <ChatPage />
+                    </AnimatedPage>
+                  }
+                />
+                <Route
+                  path="/home"
                   element={
                     <AnimatedPage>
                       <HomePage />
