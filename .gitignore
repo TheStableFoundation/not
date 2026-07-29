@@ -47,6 +47,9 @@ target
 # Environment
 .env
 
+# App Store / Play Store credentials (see .env.appstore.example)
+.env.appstore
+
 # Design sync (regenerated artifacts — durable set under .design-sync/ IS committed)
 .ds-sync/
 ds-bundle/
