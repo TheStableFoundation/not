@@ -46,3 +46,11 @@ target
 
 # Environment
 .env
+
+# Design sync (regenerated artifacts — durable set under .design-sync/ IS committed)
+.ds-sync/
+ds-bundle/
+.design-sync/.cache/
+.design-sync/learnings/
+.design-sync/node_modules
+notwallet-ds-entry.js
