@@ -9,21 +9,27 @@ import { Typography } from "@mui/material";
 
 interface NavItem {
   path: string;
-  key: "home" | "wallet" | "settings";
+  key: "chat" | "wallet" | "profile";
   icon: React.ReactElement;
 }
 
 const navItems: NavItem[] = [
   {
     path: "/",
-    key: "home",
+    key: "chat",
     icon: (
       <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
         <path
-          d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-4h-4v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10.5z"
+          d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-4.5 4.2c-.5.47-1.3.12-1.3-.57V5z"
           stroke="#a21caf"
           strokeWidth="1.5"
           strokeLinejoin="round"
+        />
+        <path
+          d="M8 9h8M8 12.5h5"
+          stroke="#a21caf"
+          strokeWidth="1.5"
+          strokeLinecap="round"
         />
       </svg>
     ),
@@ -44,7 +50,7 @@ const navItems: NavItem[] = [
   },
   {
     path: "/settings",
-    key: "settings",
+    key: "profile",
     icon: (
       <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="3" stroke="#a21caf" strokeWidth="1.5" />
@@ -67,38 +73,17 @@ export default function Navbar() {
   const isActivePath = (path: string) => {
     debug(`Current path: ${location.pathname}`);
     if (path === "/") {
-      return (
-        location.pathname === "/" ||
-        location.pathname === "/home" ||
-        location.pathname === "/home/dao" ||
-        location.pathname === "/home/learn"
-      );
+      return location.pathname === "/";
     }
     if (path === "/wallet") {
-      return (
-        location.pathname === "/wallet" ||
-        location.pathname === "/wallet/buy" ||
-        location.pathname === "/wallet/buy/stripe" ||
-        location.pathname === "/wallet/create-new-wallet" ||
-        location.pathname === "/wallet/create-new-wallet/done" ||
-        location.pathname === "/wallet/import" ||
-        location.pathname === "/wallet/onboarding" ||
-        location.pathname === "/wallet/onboarding/create-password" ||
-        location.pathname === "/wallet/onboarding/create-wallet" ||
-        location.pathname === "/wallet/onboarding/create-wallet-disclaimer" ||
-        location.pathname === "/wallet/onboarding/import" ||
-        location.pathname === "/wallet/onboarding/import-keypairs" ||
-        location.pathname === "/wallet/onboarding/import-wallet" ||
-        location.pathname === "/wallet/sell" ||
-        location.pathname === "/wallet/settings" ||
-        location.pathname === "/wallet/token"
-      );
+      return location.pathname.startsWith("/wallet");
     }
     if (path === "/settings") {
+      // The activity dashboard lives under /home and is reached from Profile,
+      // so it keeps the Profile tab highlighted.
       return (
-        location.pathname === "/settings" ||
-        location.pathname === "/settings/about" ||
-        location.pathname === "/settings/app-info"
+        location.pathname.startsWith("/settings") ||
+        location.pathname.startsWith("/home")
       );
     }
     return false;
