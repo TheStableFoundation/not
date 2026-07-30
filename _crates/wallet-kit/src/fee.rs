@@ -13,6 +13,16 @@ use {
     thiserror::Error,
 };
 
+// `solana_sdk::system_instruction` is deprecated in favour of the
+// `solana_system_interface` crate, but that migration is blocked here: this
+// tree contains solana-instruction 2.3.3 (via solana-sdk 2.3.1) *and* 3.5.0
+// (via solana-system-interface 2). The new crate returns the v3 `Instruction`
+// while solana-sdk's `Transaction` still requires the v2 one, so swapping is a
+// type error, not a drop-in. Unblocked by moving the wallet to solana-sdk 3.x.
+// The v3 code paths in this crate already use the new interface directly.
+#[allow(deprecated)]
+use solana_sdk::system_instruction;
+
 #[derive(Error, Debug)]
 pub enum FeeError {
     #[error("Invalid fee percentage: {0}")]
@@ -172,7 +182,7 @@ impl TreasuryFeeManager {
         fee_lamports: u64,
     ) -> Result<solana_sdk::instruction::Instruction, FeeError> {
         let treasury = Self::treasury_pubkey()?;
-        Ok(instruction::transfer(from, &treasury, fee_lamports))
+        Ok(system_instruction::transfer(from, &treasury, fee_lamports))
     }
 
     /// Create SOL fee transfer instruction v3

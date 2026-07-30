@@ -81,6 +81,14 @@ TAURI_CLI_MANIFEST="${TAURI_CLI_MANIFEST:-}"
 ASC_API_KEY="${ASC_API_KEY:-}"
 ASC_ISSUER_ID="${ASC_ISSUER_ID:-}"
 
+# Apple Developer Team ID (10 characters, e.g. ABCDE12345). Found under
+# Membership details at https://developer.apple.com/account.
+#
+# src-tauri/tauri.conf.json commits the placeholder "your_team_id" so no real
+# account identifier lands in the repository; the init and build steps patch the
+# real value in from here via an inline --config, leaving the file unmodified.
+APPLE_DEVELOPMENT_TEAM="${APPLE_DEVELOPMENT_TEAM:-}"
+
 # Beta-macOS submission workaround (non-sensitive; safe default).
 #
 # App Store Connect rejects binaries whose Info.plist reports a *beta*
@@ -164,12 +172,24 @@ do_clean() {
   ok "Removed ${GEN_APPLE}"
 }
 
+# Inline --config patch carrying the real Team ID, replacing the committed
+# "your_team_id" placeholder. Both `ios init` (which bakes the team into the
+# generated Xcode project) and `ios build` (which signs with it) need this.
+team_config_json() {
+  [[ -n "${APPLE_DEVELOPMENT_TEAM}" ]] \
+    || fail "APPLE_DEVELOPMENT_TEAM is not set.\n       Add your 10-character Apple Developer Team ID to .env.appstore:\n       APPLE_DEVELOPMENT_TEAM=ABCDE12345\n       Find it under Membership details at https://developer.apple.com/account."
+  jq -nc --arg team "${APPLE_DEVELOPMENT_TEAM}" \
+    '{bundle: {iOS: {developmentTeam: $team}}}'
+}
+
 do_init() {
   step "Init"
 
   [[ -f "$IOS_CONFIG" ]] || fail "Config not found: $IOS_CONFIG"
+  TEAM_JSON="$(team_config_json)"
 
   echo "📱  config  → ${IOS_CONFIG}"
+  echo "👥  team    → ${APPLE_DEVELOPMENT_TEAM}"
 
   if [[ -n "$TAURI_CLI_MANIFEST" ]]; then
     [[ -f "$TAURI_CLI_MANIFEST" ]] \
@@ -180,11 +200,12 @@ do_init() {
       --manifest-path "${TAURI_CLI_MANIFEST}" \
       -p tauri-cli \
       -- tauri ios init \
-      -c "${IOS_CONFIG}"
+      -c "${IOS_CONFIG}" \
+      -c "${TEAM_JSON}"
   else
     echo "🦀  cli     → installed tauri CLI"
     echo ""
-    cargo tauri ios init -c "${IOS_CONFIG}"
+    cargo tauri ios init -c "${IOS_CONFIG}" -c "${TEAM_JSON}"
   fi
 
   ok "Xcode project generated → ${GEN_APPLE}"
@@ -212,6 +233,7 @@ do_build() {
 
   [[ -f "$IOS_CONFIG" ]] || fail "Config not found: $IOS_CONFIG"
   [[ -d "$GEN_APPLE" ]]  || fail "Xcode project not found at ${GEN_APPLE}\n       Run 'init' step first."
+  TEAM_JSON="$(team_config_json)"
 
   # CFBundleVersion: YYYYMMDD.HHMM (UTC)
   #   Two period-separated integers → valid for Apple
@@ -221,6 +243,7 @@ do_build() {
 
   echo "🏷   bundleVersion  → ${BUNDLE_VERSION}"
   echo "📦  app config     → ${IOS_CONFIG}"
+  echo "👥  team           → ${APPLE_DEVELOPMENT_TEAM}"
   echo ""
 
   # `cargo tauri ios build` resolves the toolchain from the system xcode-select
@@ -231,6 +254,7 @@ do_build() {
   cargo tauri ios build \
     --export-method app-store-connect \
     --config "${IOS_CONFIG}" \
+    --config "${TEAM_JSON}" \
     --config "${BUNDLE_VERSION_JSON}"
 
   resolve_ipa
