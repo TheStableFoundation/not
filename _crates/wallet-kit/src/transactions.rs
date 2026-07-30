@@ -7,9 +7,12 @@ use {
     smbcloud_wallet_core_model::models::asset_solana::SolanaAsset,
     solana_client::{nonblocking::rpc_client::RpcClient, rpc_request::TokenAccountsFilter},
     solana_sdk::{
-        program_pack::Pack, pubkey::Pubkey, signature::Keypair, signer::Signer, system_instruction,
+        program_pack::Pack, pubkey::Pubkey, signature::Keypair, signer::Signer,
         transaction::Transaction,
     },
+    // `solana_sdk::system_instruction` is deprecated in favour of this crate.
+    // Aliased to the old name so the call sites below stay unchanged.
+    solana_system_interface::instruction as system_instruction,
     spl_token::{
         instruction as token_instruction,
         state::{Account as TokenAccount, Mint},

@@ -62,11 +62,23 @@ export DEVELOPER_DIR
 #
 # Installer signing identity: the "3rd Party Mac Developer Installer" certificate
 # (name or SHA-1 fingerprint) in your keychain. This is NOT the same as the app
-# signing identity declared in tauri.prod-macos-appstore.conf.json
-# (bundle.macOS.signingIdentity), which Tauri uses to codesign the .app bundle
-# itself — productbuild requires a separate Installer cert.
+# signing identity in APP_SIGNING_IDENTITY below, which Tauri uses to codesign
+# the .app bundle itself — productbuild requires a separate Installer cert.
 # Find it with: security find-identity -v
 SIGNING_IDENTITY="${SIGNING_IDENTITY:-}"
+
+# App codesigning identity: the "3rd Party Mac Developer Application"
+# certificate (name or SHA-1 fingerprint) Tauri uses to sign the .app bundle.
+# Injected into bundle.macOS.signingIdentity as an inline --config patch so no
+# identity is committed to tauri.prod-macos-appstore.conf.json.
+APP_SIGNING_IDENTITY="${APP_SIGNING_IDENTITY:-}"
+
+# Absolute path to the Mac App Store provisioning profile for this bundle id,
+# downloaded from the Apple Developer portal (Certificates, Identifiers &
+# Profiles → Profiles → macOS App Store). Embedded into the .app as
+# Contents/embedded.provisionprofile. Kept out of the committed config for the
+# same reason as the identity above.
+PROVISIONPROFILE_PATH="${PROVISIONPROFILE_PATH:-}"
 
 # App Store Connect API credentials.
 # ASC_API_KEY   — Key ID shown in App Store Connect → Users & Access → Keys.
@@ -104,6 +116,70 @@ require_release_xcode() {
   echo "🛠   Xcode  → $(xcodebuild -version 2>/dev/null | head -1)  [${DEVELOPER_DIR}]"
 }
 
+# ── Proc-macro deployment-target workaround ───────────────────────────────────
+#
+# Tauri exports bundle.macOS.minimumSystemVersion as MACOSX_DEPLOYMENT_TARGET
+# for the whole cargo invocation — including the *host* proc-macro dylibs that
+# rustc has to dlopen at compile time. At a deployment target of 12.0 or above
+# the linker switches to chained fixups, and recent macOS dyld then refuses to
+# load the result:
+#
+#   error: .../libserde_derive-<hash>.dylib: dlopen(...):
+#          mis-aligned LINKEDIT string pool, fileOffset=0x...
+#   error[E0463]: can't find crate for `thiserror_impl`
+#
+# which breaks every derive-macro crate in the graph (serde_derive,
+# thiserror_impl, borsh_derive, zerocopy_derive, bytemuck_derive, …). It is not
+# specific to this project: a two-crate scratch project reproduces it, on both
+# Xcode 26.6 (ld-1267) and 27.0b4 (ld-27036), on rustc 1.92 through current
+# stable. minimumSystemVersion 11.0 links the old-style fixups and works.
+#
+# MACOSX_DEPLOYMENT_TARGET is *not* part of cargo's fingerprint, so a build at
+# 11.0 produces host proc-macro dylibs with exactly the hashes the real build
+# wants. We therefore compile once at 11.0 to populate them, then run the real
+# build, which reuses them instead of relinking them at the broken setting.
+#
+# Because the fingerprint ignores the deployment target, cargo will not rebuild
+# already-poisoned dylibs either — so the prewarm deletes them first.
+PREWARM_MIN_SYSTEM_VERSION="11.0"
+
+# True when every host proc-macro dylib in target/release/deps can be loaded.
+# No dylibs yet (a clean tree) counts as "not ok" so the prewarm still runs.
+host_procmacros_loadable() {
+  local deps="${REPO_ROOT}/src-tauri/target/release/deps"
+  compgen -G "${deps}/*.dylib" >/dev/null || return 1
+  local d
+  for d in "${deps}"/*.dylib; do
+    python3 -c 'import ctypes,sys; ctypes.CDLL(sys.argv[1])' "$d" >/dev/null 2>&1 || return 1
+  done
+}
+
+prewarm_host_procmacros() {
+  if host_procmacros_loadable; then
+    echo "🧩  host proc-macros  → already loadable, skipping prewarm"
+    return
+  fi
+
+  echo "🧩  host proc-macros  → prewarming at minimumSystemVersion ${PREWARM_MIN_SYSTEM_VERSION}"
+  echo "                        (works around dyld rejecting chained-fixups proc-macro dylibs)"
+
+  # Drop the poisoned dylibs; cargo would otherwise consider them fresh.
+  rm -rf "${REPO_ROOT}/src-tauri/target/release"
+
+  # --no-bundle: this pass only exists to produce loadable proc-macro dylibs,
+  # so skip bundling (and its signing/provisioning requirements) entirely.
+  cargo tauri build \
+    --no-bundle \
+    --target universal-apple-darwin \
+    --config "${APPSTORE_CONFIG}" \
+    --config "{\"bundle\":{\"macOS\":{\"minimumSystemVersion\":\"${PREWARM_MIN_SYSTEM_VERSION}\"}}}"
+
+  host_procmacros_loadable \
+    || fail "Prewarm finished but host proc-macro dylibs are still unloadable.\n       Inspect: otool -l src-tauri/target/release/deps/libserde_derive-*.dylib | grep minos"
+
+  ok "Host proc-macros prewarmed"
+}
+
 # ── Steps ─────────────────────────────────────────────────────────────────────
 
 do_build() {
@@ -112,24 +188,49 @@ do_build() {
   require_release_xcode
   [[ -f "$APPSTORE_CONFIG" ]] || fail "Config not found: $APPSTORE_CONFIG"
 
+  if [[ -z "${APP_SIGNING_IDENTITY}" ]]; then
+    fail "APP_SIGNING_IDENTITY is not set.\n       Set the '3rd Party Mac Developer Application' certificate (name or SHA-1) in .env.appstore:\n       APP_SIGNING_IDENTITY=<identity>\n       List available identities with: security find-identity -v"
+  fi
+  if [[ -z "${PROVISIONPROFILE_PATH}" ]]; then
+    fail "PROVISIONPROFILE_PATH is not set.\n       Download the macOS App Store provisioning profile for this bundle id from\n       https://developer.apple.com/account/resources/profiles/list and set in .env.appstore:\n       PROVISIONPROFILE_PATH=/absolute/path/to/NotWallet.provisionprofile"
+  fi
+  [[ -f "${PROVISIONPROFILE_PATH}" ]] \
+    || fail "Provisioning profile not found:\n       ${PROVISIONPROFILE_PATH}\n       Fix PROVISIONPROFILE_PATH in .env.appstore."
+
   # CFBundleVersion: YYYYMMDD.HHMM (UTC)
   #   Two period-separated integers → valid for Apple
   #   Monotonically increasing      → satisfies App Store requirement
   BUNDLE_VERSION="$(date -u +"%Y%m%d.%H%M")"
-  BUNDLE_VERSION_JSON="{\"bundle\":{\"macOS\":{\"bundleVersion\":\"${BUNDLE_VERSION}\"}}}"
+
+  # Machine-specific values are patched in here rather than committed. jq builds
+  # the JSON so identities and paths containing spaces or quotes stay valid.
+  BUILD_PATCH_JSON="$(jq -nc \
+    --arg version "${BUNDLE_VERSION}" \
+    --arg identity "${APP_SIGNING_IDENTITY}" \
+    --arg profile "${PROVISIONPROFILE_PATH}" \
+    '{bundle: {macOS: {
+        bundleVersion: $version,
+        signingIdentity: $identity,
+        files: {"embedded.provisionprofile": $profile}
+     }}}')"
 
   echo "🏷   bundleVersion  → ${BUNDLE_VERSION}"
   echo "📦  app config     → ${APPSTORE_CONFIG}"
+  echo "🔑  app identity   → ${APP_SIGNING_IDENTITY}"
+  echo "📄  profile        → ${PROVISIONPROFILE_PATH}"
   echo ""
 
-  # Tauri merges multiple --config flags in order via json_patch::merge.
-  # The inline JSON overrides only bundleVersion; all other keys come from
+  prewarm_host_procmacros
+  echo ""
+
+  # Tauri merges multiple --config flags in order via json_patch::merge, so the
+  # inline patch overrides only the keys it names; everything else comes from
   # tauri.prod-macos-appstore.conf.json. The config file is never mutated.
   cargo tauri build \
     --bundles app \
     --target universal-apple-darwin \
     --config "${APPSTORE_CONFIG}" \
-    --config "${BUNDLE_VERSION_JSON}"
+    --config "${BUILD_PATCH_JSON}"
 
   [[ -d "$APP_PATH" ]] || fail "Build succeeded but .app not found at: $APP_PATH"
   ok "Build complete → ${APP_PATH}"

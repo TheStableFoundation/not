@@ -6,7 +6,7 @@ use {
     },
     solana_address::Address,
     solana_instruction::Instruction,
-    solana_sdk::{pubkey::Pubkey, system_instruction},
+    solana_sdk::pubkey::Pubkey,
     solana_system_interface::instruction,
     spl_token::instruction as token_instruction,
     std::str::FromStr,
@@ -172,7 +172,7 @@ impl TreasuryFeeManager {
         fee_lamports: u64,
     ) -> Result<solana_sdk::instruction::Instruction, FeeError> {
         let treasury = Self::treasury_pubkey()?;
-        Ok(system_instruction::transfer(from, &treasury, fee_lamports))
+        Ok(instruction::transfer(from, &treasury, fee_lamports))
     }
 
     /// Create SOL fee transfer instruction v3

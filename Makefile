@@ -32,6 +32,9 @@
 # make release-windows         — tauri build, Windows (direct download)
 # make release-windows-msstore — tauri build, Windows (Microsoft Store)
 #
+# ── Store assets ───────────────────────────────────────────────────────────
+# make screenshots     — render all App Store screenshots (3 devices x 4 locales)
+#
 # ── Development ────────────────────────────────────────────────────────────
 # make dev             — start the Tauri dev server
 # make build           — standard production build
@@ -45,7 +48,7 @@
         asios asios-clean asios-init asios-icons asios-override asios-build asios-fixplist asios-upload \
         psmobile psmobile-clean psmobile-init psmobile-icons psmobile-override psmobile-keystore psmobile-build psmobile-open \
         release-macos release-linux release-windows release-windows-msstore \
-        fmt lint clean
+        screenshots fmt lint clean
 
 # ── macOS App Store ────────────────────────────────────────────────────────
 
@@ -127,6 +130,14 @@ release-windows:
 
 release-windows-msstore:
 	pnpm tauri build -c src-tauri/tauri.prod-windows-microsoftstore.conf.json
+
+# ── Store assets ───────────────────────────────────────────────────────────
+
+# Renders from the app's real markup + built Tailwind bundle, so `pnpm build`
+# must run first. Needs playwright in .ds-sync (see the screenshot plan).
+screenshots:
+	pnpm build
+	node assets/aso/appstore/screenshots/generator/generate.mjs
 
 # ── Development ────────────────────────────────────────────────────────────
 

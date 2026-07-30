@@ -57,3 +57,6 @@ ds-bundle/
 .design-sync/learnings/
 .design-sync/node_modules
 notwallet-ds-entry.js
+
+# Screenshot generator's supplemental Tailwind build (regenerated on each run)
+assets/aso/**/generator/.gen-utilities.build.css
