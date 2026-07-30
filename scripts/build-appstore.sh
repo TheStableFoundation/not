@@ -73,6 +73,11 @@ SIGNING_IDENTITY="${SIGNING_IDENTITY:-}"
 # identity is committed to tauri.prod-macos-appstore.conf.json.
 APP_SIGNING_IDENTITY="${APP_SIGNING_IDENTITY:-}"
 
+# Apple Developer Team ID (10 characters, e.g. ABCDE12345). Found under
+# Membership details at https://developer.apple.com/account. Substituted into
+# the entitlements template together with the bundle identifier.
+APPLE_DEVELOPMENT_TEAM="${APPLE_DEVELOPMENT_TEAM:-}"
+
 # Absolute path to the Mac App Store provisioning profile for this bundle id,
 # downloaded from the Apple Developer portal (Certificates, Identifiers &
 # Profiles → Profiles → macOS App Store). Embedded into the .app as
@@ -114,6 +119,53 @@ require_release_xcode() {
       fail "DEVELOPER_DIR points at a beta Xcode:\n       ${DEVELOPER_DIR}\n       App Store Connect rejects beta-built binaries. Point DEVELOPER_DIR at a release Xcode." ;;
   esac
   echo "🛠   Xcode  → $(xcodebuild -version 2>/dev/null | head -1)  [${DEVELOPER_DIR}]"
+}
+
+# ── Entitlements ──────────────────────────────────────────────────────────────
+#
+# src-tauri/Entitlements-appstore.plist is committed as a template so no Apple
+# account identifier lands in the repository:
+#
+#   <key>com.apple.application-identifier</key>   <string>$TEAM_ID.$IDENTIFIER</string>
+#   <key>com.apple.developer.team-identifier</key><string>$TEAM_ID</string>
+#
+# codesign does not expand those, and a literal "$TEAM_ID" in the entitlements
+# is rejected at App Store Connect validation. So render a copy under target/
+# (gitignored) with the real values and point bundle.macOS.entitlements at it.
+# The template itself is never modified.
+ENTITLEMENTS_TEMPLATE="${REPO_ROOT}/src-tauri/Entitlements-appstore.plist"
+ENTITLEMENTS_RENDERED="${REPO_ROOT}/src-tauri/target/Entitlements-appstore.generated.plist"
+
+# Bundle identifier, read from the App Store config with the base config as
+# fallback — must match the provisioning profile and the App Store Connect app.
+app_identifier() {
+  local id
+  id="$(jq -r '.identifier // empty' "${APPSTORE_CONFIG}")"
+  [[ -z "$id" ]] && id="$(jq -r '.identifier // empty' "${REPO_ROOT}/src-tauri/tauri.conf.json")"
+  [[ -n "$id" ]] || fail "Could not determine the bundle identifier from ${APPSTORE_CONFIG}"
+  printf '%s\n' "$id"
+}
+
+render_entitlements() {
+  [[ -f "${ENTITLEMENTS_TEMPLATE}" ]] \
+    || fail "Entitlements template not found: ${ENTITLEMENTS_TEMPLATE}"
+
+  local identifier; identifier="$(app_identifier)"
+
+  mkdir -p "$(dirname "${ENTITLEMENTS_RENDERED}")"
+  sed -e "s|\$TEAM_ID|${APPLE_DEVELOPMENT_TEAM}|g" \
+      -e "s|\$IDENTIFIER|${identifier}|g" \
+      "${ENTITLEMENTS_TEMPLATE}" > "${ENTITLEMENTS_RENDERED}"
+
+  # A leftover placeholder means the template gained a variable this function
+  # does not know about — fail loudly rather than ship broken entitlements.
+  if grep -q '\$[A-Z_]\{2,\}' "${ENTITLEMENTS_RENDERED}"; then
+    fail "Unsubstituted placeholder left in ${ENTITLEMENTS_RENDERED}:\n$(grep -n '\$[A-Z_]\{2,\}' "${ENTITLEMENTS_RENDERED}")"
+  fi
+  plutil -lint "${ENTITLEMENTS_RENDERED}" >/dev/null \
+    || fail "Rendered entitlements are not a valid plist: ${ENTITLEMENTS_RENDERED}"
+
+  echo "🔐  entitlements   → ${APPLE_DEVELOPMENT_TEAM}.${identifier}"
 }
 
 # ── Proc-macro deployment-target workaround ───────────────────────────────────
@@ -191,6 +243,9 @@ do_build() {
   if [[ -z "${APP_SIGNING_IDENTITY}" ]]; then
     fail "APP_SIGNING_IDENTITY is not set.\n       Set the '3rd Party Mac Developer Application' certificate (name or SHA-1) in .env.appstore:\n       APP_SIGNING_IDENTITY=<identity>\n       List available identities with: security find-identity -v"
   fi
+  if [[ -z "${APPLE_DEVELOPMENT_TEAM}" ]]; then
+    fail "APPLE_DEVELOPMENT_TEAM is not set.\n       Add your 10-character Apple Developer Team ID to .env.appstore:\n       APPLE_DEVELOPMENT_TEAM=ABCDE12345\n       Find it under Membership details at https://developer.apple.com/account."
+  fi
   if [[ -z "${PROVISIONPROFILE_PATH}" ]]; then
     fail "PROVISIONPROFILE_PATH is not set.\n       Download the macOS App Store provisioning profile for this bundle id from\n       https://developer.apple.com/account/resources/profiles/list and set in .env.appstore:\n       PROVISIONPROFILE_PATH=/absolute/path/to/NotWallet.provisionprofile"
   fi
@@ -208,9 +263,11 @@ do_build() {
     --arg version "${BUNDLE_VERSION}" \
     --arg identity "${APP_SIGNING_IDENTITY}" \
     --arg profile "${PROVISIONPROFILE_PATH}" \
+    --arg entitlements "${ENTITLEMENTS_RENDERED}" \
     '{bundle: {macOS: {
         bundleVersion: $version,
         signingIdentity: $identity,
+        entitlements: $entitlements,
         files: {"embedded.provisionprofile": $profile}
      }}}')"
 
@@ -218,6 +275,7 @@ do_build() {
   echo "📦  app config     → ${APPSTORE_CONFIG}"
   echo "🔑  app identity   → ${APP_SIGNING_IDENTITY}"
   echo "📄  profile        → ${PROVISIONPROFILE_PATH}"
+  render_entitlements
   echo ""
 
   prewarm_host_procmacros
